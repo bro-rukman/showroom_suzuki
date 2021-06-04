@@ -27,7 +27,6 @@ class Headers extends Component {
     }
     render() {
         const dataProps = this.props
-        console.log(dataProps);
         return (
             <>
                 <section id="navbar" className="bg-light box-shadow sticky" style={{zIndex:4}}>

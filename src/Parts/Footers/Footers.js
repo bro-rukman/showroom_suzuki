@@ -7,7 +7,6 @@ import Phone from '../../Assets/Images/Icon/Callwhite.svg'
 import Location from '../../Assets/Images/Icon/PinPrimary.svg'
 
 export default function Footers(props) {
-    console.log(props);
     return (
         <>
             <div className="bg-white mx-auto h-100">

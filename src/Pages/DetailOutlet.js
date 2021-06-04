@@ -13,14 +13,16 @@ class DetailOutlet extends Component {
     constructor(props){
         super(props)
         this.state={
-            dataOutlet : {}
+            dataOutlet : {},
+            detailOutlet : {}
         }
     }
     componentDidMount(){
         let id = this.props.match.params.id
         axios.get(`${RootDevelopment}/dataCabang/${id}`).then((res)=>{
             this.setState({
-                dataOutlet : res.data
+                dataOutlet : res.data,
+                detailOutlet : res.data.detail
             })
         }).catch(error=>{
             console.log(error);
@@ -29,6 +31,12 @@ class DetailOutlet extends Component {
     render() {
         const data = this.state.dataOutlet
         console.log(data);
+        const detailOutlet = this.state.detailOutlet
+        console.log(detailOutlet);
+        const detailCars = detailOutlet.cars
+        console.log(detailCars);
+        const detailCarousel = detailOutlet.carousel
+        console.log(detailCarousel);
         var slideIndex = 1
         showSlides(slideIndex);
         function PlusSlides(n){
@@ -59,7 +67,16 @@ class DetailOutlet extends Component {
         return (
             <>
                 <Headers data={data}/>
-                <div className="w-375 mx-auto box-shadow">
+                <div className="w-375 mx-auto box-shadow relative">
+                {
+                        detailCarousel?.map((carousel,i)=>{
+                            return(
+                                <div data={carousel} key={i}>
+                                    <img src={carousel.image} alt="carousel" style={{width:'100%'}}/>
+                                </div>
+                            )
+                        })
+                    }
                     {/* <div>
                         <div className="slide-container">
                             <div className="slider fade">
@@ -80,11 +97,12 @@ class DetailOutlet extends Component {
                             <span className="dot" onClick={currentSlide(3)}></span>
                         </div>
                     </div> */}
-                    <div className="bg-primary" style={{height:'146px'}}>
+                    <div className="bg-primary" style={{height:'146px',marginTop:'-5px'}}>
                         <p className="text-600 fs-18 text-white text-center p-3 m-0" style={{paddingTop:'30px'}}>Temukan Mobil Suzuki yang <br /> tepat untuk Anda</p>
                     </div>
                     <Tab data={data}/>
                     <Footers data={data}/>
+                    
                 </div>
             </>
         );

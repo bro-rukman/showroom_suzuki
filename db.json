@@ -57,7 +57,7 @@
                 "carousel": [
                     {
                         "id": 1,
-                        "image": "image/carousel1.png"
+                        "image": "/image/carousel1.png"
                     }
                 ],
                 "cars": [
@@ -65,25 +65,25 @@
                         "id": 1,
                         "title": "XL 7",
                         "price": "232000000",
-                        "image": "../public/image/xl7.png"
+                        "image": "/image/xl7.png"
                     },
                     {
                         "id": 2,
                         "title": "All New Ertiga",
                         "price": "207000000",
-                        "image": "image/newertiga.png"
+                        "image": "/image/newertiga.png"
                     },
                     {
                         "id": 3,
                         "title": "All New Ertiga Suzuki Sport",
                         "price": "252000000",
-                        "image": "image/ertigasport.png"
+                        "image": "/image/ertigasport.png"
                     },
                     {
                         "id": 4,
                         "title": "New Ignis",
                         "price": "171000000",
-                        "image": "image/ignis.png"
+                        "image": "/image/ignis.png"
                     }
                 ]
             },
