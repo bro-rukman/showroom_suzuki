@@ -1,0 +1,189 @@
+{
+    "dataCabang": [
+        {
+            "id": 1,
+            "image": "image/cabang1.png",
+            "service": "Sales, Service, Sparepart, Body & Paint",
+            "title": "SUZUKI NJS SOEKARNO - HATTA",
+            "subtitle": "Main Dealer Suzuki Jawa Barat",
+            "phone_number": "(022) 6204654",
+            "alamat": "JL. Soekarno Hatta No. 289, Bojongloa Kidul, Bandung 40234",
+            "list": [
+                {
+                    "id": 1,
+                    "title": "Beranda",
+                    "path": "/"
+                },
+                {
+                    "id": 2,
+                    "title": "Tentang Kami",
+                    "path": "/TentangKami"
+                },
+                {
+                    "id": 3,
+                    "title": "Outlet",
+                    "path": "/Outlet"
+                },
+                {
+                    "id": 4,
+                    "title": "Blog",
+                    "path": "/Blog"
+                },
+                {
+                    "id": 5,
+                    "title": "Promo",
+                    "path": "/Promo"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "image": "image/cabang2.png",
+            "service": "Sales, Service, Sparepart",
+            "title": "SUZUKI NJS CIBEUREUM",
+            "subtitle": "Nusantara Jaya Sentosa",
+            "phone_number": "(022) 6204645",
+            "alamat": "JL. Raya Cibeureum 48 B Bandung"
+        },
+        {
+            "id": 3,
+            "image": "image/cabang3.png",
+            "service": "Sales, Service, Sparepart",
+            "title": "SUZUKI NJS BUAH BATU",
+            "subtitle": "Nusantara Jaya Sentosa",
+            "phone_number": "(022) 7300723",
+            "alamat": "JL. Soekarno – Hatta No. 513 Bandung",
+            "detail": {
+                "carousel": [
+                    {
+                        "id": 1,
+                        "image": "image/carousel1.png"
+                    }
+                ],
+                "cars": [
+                    {
+                        "id": 1,
+                        "title": "XL 7",
+                        "price": "232000000",
+                        "image": "image/xl7.png"
+                    },
+                    {
+                        "id": 2,
+                        "title": "All New Ertiga",
+                        "price": "207000000",
+                        "image": "image/newertiga.png"
+                    },
+                    {
+                        "id": 3,
+                        "title": "All New Ertiga Suzuki Sport",
+                        "price": "252000000",
+                        "image": "image/ertigasport.png"
+                    },
+                    {
+                        "id": 4,
+                        "title": "New Ignis",
+                        "price": "171000000",
+                        "image": "image/ignis.png"
+                    }
+                ]
+            },
+            "list": [
+                {
+                    "id": 1,
+                    "title": "Beranda",
+                    "path": "/"
+                },
+                {
+                    "id": 2,
+                    "title": "Mobil",
+                    "path": "/Mobil"
+                },
+                {
+                    "id": 3,
+                    "title": "Service",
+                    "path": "/Service"
+                },
+                {
+                    "id": 4,
+                    "title": "Sparepart",
+                    "path": "/Blog"
+                },
+                {
+                    "id": 5,
+                    "title": "Tentang Kami",
+                    "path": "/TentangKami"
+                },
+                {
+                    "id": 6,
+                    "title": "Hubungi Kami",
+                    "path": "/HubungiKami"
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "image": "image/cabang4.png",
+            "service": "Sales , Service, Sparepart",
+            "title": "SUZUKI NJS AHMAD YANI",
+            "subtitle": "Nusantara Jaya Sentosa",
+            "phone_number": "(022) 7101655",
+            "alamat": "JL. Jenderal Ahmad Yani 259 Bandung"
+        },
+        {
+            "id": 5,
+            "image": "image/cabang5.png",
+            "service": "Sales",
+            "title": "SUZUKI NJS KOPO",
+            "subtitle": "Nusantara Jaya Sentosa",
+            "phone_number": "(022) 5422259",
+            "alamat": "JL. Kopo (Sayati) 260 C Bandung"
+        },
+        {
+            "id": 6,
+            "image": "image/cabang6.png",
+            "service": "Sales",
+            "title": "SUZUKI NJS DAGO",
+            "subtitle": "Nusantara Jaya Sentosa",
+            "phone_number": "(022) 6002512",
+            "alamat": "JL. IR.H. Juanda (Dago) No. 75 Bandung"
+        },
+        {
+            "id": 7,
+            "image": "image/cabang7.png",
+            "service": "Sales, Service, Sparepart",
+            "title": "SUZUKI NJS SETIABUDHI",
+            "subtitle": "Nusantara Jaya Sentosa",
+            "phone_number": "(022) 2030787",
+            "alamat": "JL. DR. Setiabudhi No. 78 Bandung"
+        },
+        {
+            "id": 8,
+            "image": "image/cabang8.png",
+            "service": "Sales, Service, Sparepart",
+            "title": "SUZUKI NJS RANCAEKEK",
+            "subtitle": "Nusantara Jaya Sentosa",
+            "phone_number": "(022) 87836800",
+            "alamat": "JL. Raya Rancaekek Cipasir KM. 22 Rancaekek"
+        }
+    ],
+    "dataPromo": [
+        {
+            "id": 1,
+            "image": "image/promo1.png",
+            "date": "Rabu, 19 Agustus 2020",
+            "title": "Promo Pembelian Berhadiah Periode Bulan September 2020"
+        },
+        {
+            "id": 2,
+            "image": "image/promo2.png",
+            "date": "Selasa, 17 Agustus 2020",
+            "title": "Suzuki Insurance – Ganti Mobil Anda Dengan Nilai yang Sama"
+        },
+        {
+            "id": 3,
+            "image": "image/promo3.png",
+            "date": "Rabu, 19 Agustus 2020",
+            "title": "Suzuki Peduli Gempa Maluku 2019, Bentuk Kepedulian Untuk Korban "
+        }
+    ]
+}

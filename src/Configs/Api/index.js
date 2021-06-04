@@ -1,0 +1,1 @@
+export const RootDevelopment = 'http://localhost:3005'
