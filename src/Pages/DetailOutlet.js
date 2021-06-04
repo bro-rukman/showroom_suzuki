@@ -5,6 +5,9 @@ import Footers from '../Parts/Footers/Footers';
 import Headers from '../Parts/Headers/Headers';
 import CarouselImage from '../Assets/Images/carousel1.png'
 import Slider from 'react-slick'
+import Tabs from '../Components/Tabs/Tabs';
+import Tab from '../Components/Tabs/Tab';
+// import {Tab} from '../Components/Tabs/Tab'
 
 class DetailOutlet extends Component {
     constructor(props){
@@ -78,13 +81,10 @@ class DetailOutlet extends Component {
                         </div>
                     </div> */}
                     <div className="bg-primary" style={{height:'146px'}}>
-                            <p className="text-600 fs-18 text-white text-center p-3 m-0" style={{paddingTop:'23px'}}>Temukan Mobil Suzuki yang <br /> tepat untuk Anda</p>
-                            <div className="tab">
-                                <button className="tablink" onClick={openCity(event,'Passenger')}>Passenger Car</button>
-                                <button className="tablink" onClick={openCity(event,'Commercial')}>Commercial Car</button>
-                            </div>
-                        </div>
-                <Footers data={data}/>
+                        <p className="text-600 fs-18 text-white text-center p-3 m-0" style={{paddingTop:'30px'}}>Temukan Mobil Suzuki yang <br /> tepat untuk Anda</p>
+                    </div>
+                    <Tab data={data}/>
+                    <Footers data={data}/>
                 </div>
             </>
         );

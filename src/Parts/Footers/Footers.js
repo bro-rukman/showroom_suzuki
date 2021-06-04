@@ -11,7 +11,7 @@ export default function Footers(props) {
     return (
         <>
             <div className="bg-white mx-auto h-100">
-                        <div className="container mt-2" style={{marginTop:'20px'}}>
+                        <div className="container">
                             <div className="p-2">
                                 <ul className="text-center" style={{padding:0}}>
                                     {
@@ -28,7 +28,7 @@ export default function Footers(props) {
                                 </ul>
                             </div>
                             <hr />
-                            <p className="text-center fs-16 text-700">ALAMAT</p>
+                            <p className="text-center fs-16 text-700 my-2">ALAMAT</p>
                             <p className="text-center fs-14 text-700 m-0">{props.data.title}</p>
                             <p className="text-center fs-14 text-400 m-0">{props.data.alamat}</p>
                             <div className="d-flex justify-content-center align-items-center location">

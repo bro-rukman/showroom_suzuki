@@ -65,7 +65,7 @@
                         "id": 1,
                         "title": "XL 7",
                         "price": "232000000",
-                        "image": "image/xl7.png"
+                        "image": "../public/image/xl7.png"
                     },
                     {
                         "id": 2,
