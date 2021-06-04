@@ -27,6 +27,38 @@ class Headers extends Component {
     }
     render() {
         const dataProps = this.props
+        const dataHeader =[
+            {
+                id:1,
+                title:"Beranda",
+                path : "/"
+            },
+            {
+                id:2,
+                title:"Tentang Kami",
+                path : "/"
+            },
+            {
+                id:3,
+                title:"Mobil",
+                path : "/"
+            },
+            {
+                id:4,
+                title:"Service",
+                path : "/"
+            },
+            {
+                id:5,
+                title:"Sparepart",
+                path : "/"
+            },
+            {
+                id:6,
+                title:"Hubungi Kami",
+                path : "/"
+            },
+        ]
         return (
             <>
                 <section id="navbar" className="bg-light box-shadow sticky" style={{zIndex:4}}>
@@ -48,30 +80,22 @@ class Headers extends Component {
                         <img src={Cancel} alt="menu" onClick={this.CloseNav} className="no-border bg-primary pointer" style={{padding:'8px',borderRadius:'50%'}} />
                     </div>
                     <ul className="px-3 m-0">
-                        <li className="pl-10">
-                            <Link to="/" className="child">Beranda</Link>
-                        </li>
-                        <li className="pl-10">
-                            <Link to="/" className="child">Tentang Kami</Link>
-                        </li>
-                        <li className="pl-10">
-                            <Link to="/" className="child">Mobil</Link>
-                        </li>
-                        <li className="pl-10">
-                            <Link to="/" className="child">Service</Link>
-                        </li>
-                        <li className="pl-10">
-                            <Link to="/" className="child">Sparepart</Link>
-                        </li>
-                        <li className="pl-10">
-                            <Link to="/" className="child">Hubungi Kami</Link>
-                        </li>
+                        {
+                            dataHeader?.length > 0 ? (dataHeader?.map((item,i)=>{
+                                console.log(item);
+                                return(
+                                    <li className="pl-10">
+                                        <Link to={item.path} className="text-decoration-none child">{item.title}</Link>
+                                    </li>
+                                )
+                            })) : ('Loading...')
+                        }
                     <hr />
-                    <div className="bg-primary d-flex justify-content-center align-items-center gap-3">
-                        <img src={Phone} alt="" />
+                    <div className="bg-primary d-flex justify-content-center align-items-center gap-2 px-3 py-3">
+                        <img src={Phone} alt="phone"/>
                         <p className="phoneNumber">(022) 7300 723</p>
                     </div>
-                    <div className="d-flex justify-content-center align-items-center mt-2">
+                    <div className="d-flex justify-content-center align-items-center mt-4 gap-2">
                         <div>
                             <img src={Image12} alt=""  style={{width:'100%'}}/>
                         </div>

@@ -1,9 +1,10 @@
 import React,{useState} from 'react'
 import './Tabs.css'
+import '../../Assets/Css/style.css'
 import RenderCardMobil from '../../Parts/RenderCards/RenderCardMobil'
+import {Link} from 'react-router-dom'
 
 export default function Tab(props) {
-    console.log(props);
     const [Toggle, setToggle] = useState(1)
     const toggleTab =(index)=>{
         setToggle(index)
@@ -27,11 +28,12 @@ export default function Tab(props) {
                                     })) : ('No data')
                                 }
                             </div>
+                            <div className="d-flex justify-content-center py-2">
+                            <Link to="/" className="text-decoration-none"><div className="btn-block pointer "><span className=" text-600 text-primary text-center ">Lihat Semua Mobil</span></div></Link>
+                            </div>
                         </div>
                         <div className={Toggle ===2 ? "content active-content" : "content"}>
-                            <h2>content2</h2>
-                            <hr />
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque optio, excepturi et deleniti officia nisi nostrum, praesentium dicta dolore possimus nihil odit. Fuga, qui eius?</p>
+                            <p className="text-center my-3">No data</p>
                         </div>
                     </div>
                 </div>

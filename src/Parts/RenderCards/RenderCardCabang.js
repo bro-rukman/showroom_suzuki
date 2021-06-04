@@ -20,7 +20,7 @@ export default function RenderCardCabang(item) {
                     <img src={Location} alt="" />
                     <span style={{fontSize:'12px'}}>{item.data.alamat}</span>
                 </div>
-                <Link to={`/DetailOutlet/${item.data.id}`}><div className="btn-block pointer"><span className=" text-600 text-primary text-center">Kunjungi Website Outlet</span></div></Link>
+                <Link to={`/DetailOutlet/${item.data.id}`} className="text-decoration-none"><div className="btn-block pointer"><span className=" text-600 text-primary text-center">Kunjungi Website Outlet</span></div></Link>
             </div>
         </div>
     )

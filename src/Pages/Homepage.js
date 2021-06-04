@@ -77,6 +77,9 @@ class Homepage extends Component {
                     </div>
                     </div>
                     <Footers data={dataSlice}/>
+                    <div className="bg-primary" style={{height:'112px'}}>
+                        <p className="text-300 fs-14 text-white text-center p-3 m-0" style={{paddingTop:'23px'}}>&copy; 2020 Suzuki Indonesia <br /> All rights reserved</p>
+                    </div>
                 </div>
             </>
         );

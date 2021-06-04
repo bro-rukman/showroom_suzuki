@@ -43,7 +43,73 @@
             "title": "SUZUKI NJS CIBEUREUM",
             "subtitle": "Nusantara Jaya Sentosa",
             "phone_number": "(022) 6204645",
-            "alamat": "JL. Raya Cibeureum 48 B Bandung"
+            "alamat": "JL. Raya Cibeureum 48 B Bandung",
+            "detail": {
+                "carousel": [
+                    {
+                        "id": 1,
+                        "image": "/image/carousel1.png"
+                    }
+                ],
+                "cars": [
+                    {
+                        "id": 1,
+                        "title": "XL 7",
+                        "price": "232000000",
+                        "image": "/image/xl7.png"
+                    },
+                    {
+                        "id": 2,
+                        "title": "All New Ertiga",
+                        "price": "207000000",
+                        "image": "/image/newertiga.png"
+                    },
+                    {
+                        "id": 3,
+                        "title": "All New Ertiga Suzuki Sport",
+                        "price": "252000000",
+                        "image": "/image/ertigasport.png"
+                    },
+                    {
+                        "id": 4,
+                        "title": "New Ignis",
+                        "price": "171000000",
+                        "image": "/image/ignis.png"
+                    }
+                ]
+            },
+            "list": [
+                {
+                    "id": 1,
+                    "title": "Beranda",
+                    "path": "/"
+                },
+                {
+                    "id": 2,
+                    "title": "Mobil",
+                    "path": "/Mobil"
+                },
+                {
+                    "id": 3,
+                    "title": "Service",
+                    "path": "/Service"
+                },
+                {
+                    "id": 4,
+                    "title": "Sparepart",
+                    "path": "/Blog"
+                },
+                {
+                    "id": 5,
+                    "title": "Tentang Kami",
+                    "path": "/TentangKami"
+                },
+                {
+                    "id": 6,
+                    "title": "Hubungi Kami",
+                    "path": "/HubungiKami"
+                }
+            ]
         },
         {
             "id": 3,
@@ -127,7 +193,73 @@
             "title": "SUZUKI NJS AHMAD YANI",
             "subtitle": "Nusantara Jaya Sentosa",
             "phone_number": "(022) 7101655",
-            "alamat": "JL. Jenderal Ahmad Yani 259 Bandung"
+            "alamat": "JL. Jenderal Ahmad Yani 259 Bandung",
+            "detail": {
+                "carousel": [
+                    {
+                        "id": 1,
+                        "image": "/image/carousel1.png"
+                    }
+                ],
+                "cars": [
+                    {
+                        "id": 1,
+                        "title": "XL 7",
+                        "price": "232000000",
+                        "image": "/image/xl7.png"
+                    },
+                    {
+                        "id": 2,
+                        "title": "All New Ertiga",
+                        "price": "207000000",
+                        "image": "/image/newertiga.png"
+                    },
+                    {
+                        "id": 3,
+                        "title": "All New Ertiga Suzuki Sport",
+                        "price": "252000000",
+                        "image": "/image/ertigasport.png"
+                    },
+                    {
+                        "id": 4,
+                        "title": "New Ignis",
+                        "price": "171000000",
+                        "image": "/image/ignis.png"
+                    }
+                ]
+            },
+            "list": [
+                {
+                    "id": 1,
+                    "title": "Beranda",
+                    "path": "/"
+                },
+                {
+                    "id": 2,
+                    "title": "Mobil",
+                    "path": "/Mobil"
+                },
+                {
+                    "id": 3,
+                    "title": "Service",
+                    "path": "/Service"
+                },
+                {
+                    "id": 4,
+                    "title": "Sparepart",
+                    "path": "/Blog"
+                },
+                {
+                    "id": 5,
+                    "title": "Tentang Kami",
+                    "path": "/TentangKami"
+                },
+                {
+                    "id": 6,
+                    "title": "Hubungi Kami",
+                    "path": "/HubungiKami"
+                }
+            ]
         },
         {
             "id": 5,
@@ -136,7 +268,73 @@
             "title": "SUZUKI NJS KOPO",
             "subtitle": "Nusantara Jaya Sentosa",
             "phone_number": "(022) 5422259",
-            "alamat": "JL. Kopo (Sayati) 260 C Bandung"
+            "alamat": "JL. Kopo (Sayati) 260 C Bandung",
+            "detail": {
+                "carousel": [
+                    {
+                        "id": 1,
+                        "image": "/image/carousel1.png"
+                    }
+                ],
+                "cars": [
+                    {
+                        "id": 1,
+                        "title": "XL 7",
+                        "price": "232000000",
+                        "image": "/image/xl7.png"
+                    },
+                    {
+                        "id": 2,
+                        "title": "All New Ertiga",
+                        "price": "207000000",
+                        "image": "/image/newertiga.png"
+                    },
+                    {
+                        "id": 3,
+                        "title": "All New Ertiga Suzuki Sport",
+                        "price": "252000000",
+                        "image": "/image/ertigasport.png"
+                    },
+                    {
+                        "id": 4,
+                        "title": "New Ignis",
+                        "price": "171000000",
+                        "image": "/image/ignis.png"
+                    }
+                ]
+            },
+            "list": [
+                {
+                    "id": 1,
+                    "title": "Beranda",
+                    "path": "/"
+                },
+                {
+                    "id": 2,
+                    "title": "Mobil",
+                    "path": "/Mobil"
+                },
+                {
+                    "id": 3,
+                    "title": "Service",
+                    "path": "/Service"
+                },
+                {
+                    "id": 4,
+                    "title": "Sparepart",
+                    "path": "/Blog"
+                },
+                {
+                    "id": 5,
+                    "title": "Tentang Kami",
+                    "path": "/TentangKami"
+                },
+                {
+                    "id": 6,
+                    "title": "Hubungi Kami",
+                    "path": "/HubungiKami"
+                }
+            ]
         },
         {
             "id": 6,
@@ -145,7 +343,73 @@
             "title": "SUZUKI NJS DAGO",
             "subtitle": "Nusantara Jaya Sentosa",
             "phone_number": "(022) 6002512",
-            "alamat": "JL. IR.H. Juanda (Dago) No. 75 Bandung"
+            "alamat": "JL. IR.H. Juanda (Dago) No. 75 Bandung",
+            "detail": {
+                "carousel": [
+                    {
+                        "id": 1,
+                        "image": "/image/carousel1.png"
+                    }
+                ],
+                "cars": [
+                    {
+                        "id": 1,
+                        "title": "XL 7",
+                        "price": "232000000",
+                        "image": "/image/xl7.png"
+                    },
+                    {
+                        "id": 2,
+                        "title": "All New Ertiga",
+                        "price": "207000000",
+                        "image": "/image/newertiga.png"
+                    },
+                    {
+                        "id": 3,
+                        "title": "All New Ertiga Suzuki Sport",
+                        "price": "252000000",
+                        "image": "/image/ertigasport.png"
+                    },
+                    {
+                        "id": 4,
+                        "title": "New Ignis",
+                        "price": "171000000",
+                        "image": "/image/ignis.png"
+                    }
+                ]
+            },
+            "list": [
+                {
+                    "id": 1,
+                    "title": "Beranda",
+                    "path": "/"
+                },
+                {
+                    "id": 2,
+                    "title": "Mobil",
+                    "path": "/Mobil"
+                },
+                {
+                    "id": 3,
+                    "title": "Service",
+                    "path": "/Service"
+                },
+                {
+                    "id": 4,
+                    "title": "Sparepart",
+                    "path": "/Blog"
+                },
+                {
+                    "id": 5,
+                    "title": "Tentang Kami",
+                    "path": "/TentangKami"
+                },
+                {
+                    "id": 6,
+                    "title": "Hubungi Kami",
+                    "path": "/HubungiKami"
+                }
+            ]
         },
         {
             "id": 7,
@@ -154,7 +418,73 @@
             "title": "SUZUKI NJS SETIABUDHI",
             "subtitle": "Nusantara Jaya Sentosa",
             "phone_number": "(022) 2030787",
-            "alamat": "JL. DR. Setiabudhi No. 78 Bandung"
+            "alamat": "JL. DR. Setiabudhi No. 78 Bandung",
+            "detail": {
+                "carousel": [
+                    {
+                        "id": 1,
+                        "image": "/image/carousel1.png"
+                    }
+                ],
+                "cars": [
+                    {
+                        "id": 1,
+                        "title": "XL 7",
+                        "price": "232000000",
+                        "image": "/image/xl7.png"
+                    },
+                    {
+                        "id": 2,
+                        "title": "All New Ertiga",
+                        "price": "207000000",
+                        "image": "/image/newertiga.png"
+                    },
+                    {
+                        "id": 3,
+                        "title": "All New Ertiga Suzuki Sport",
+                        "price": "252000000",
+                        "image": "/image/ertigasport.png"
+                    },
+                    {
+                        "id": 4,
+                        "title": "New Ignis",
+                        "price": "171000000",
+                        "image": "/image/ignis.png"
+                    }
+                ]
+            },
+            "list": [
+                {
+                    "id": 1,
+                    "title": "Beranda",
+                    "path": "/"
+                },
+                {
+                    "id": 2,
+                    "title": "Mobil",
+                    "path": "/Mobil"
+                },
+                {
+                    "id": 3,
+                    "title": "Service",
+                    "path": "/Service"
+                },
+                {
+                    "id": 4,
+                    "title": "Sparepart",
+                    "path": "/Blog"
+                },
+                {
+                    "id": 5,
+                    "title": "Tentang Kami",
+                    "path": "/TentangKami"
+                },
+                {
+                    "id": 6,
+                    "title": "Hubungi Kami",
+                    "path": "/HubungiKami"
+                }
+            ]
         },
         {
             "id": 8,
@@ -163,7 +493,73 @@
             "title": "SUZUKI NJS RANCAEKEK",
             "subtitle": "Nusantara Jaya Sentosa",
             "phone_number": "(022) 87836800",
-            "alamat": "JL. Raya Rancaekek Cipasir KM. 22 Rancaekek"
+            "alamat": "JL. Raya Rancaekek Cipasir KM. 22 Rancaekek",
+            "detail": {
+                "carousel": [
+                    {
+                        "id": 1,
+                        "image": "/image/carousel1.png"
+                    }
+                ],
+                "cars": [
+                    {
+                        "id": 1,
+                        "title": "XL 7",
+                        "price": "232000000",
+                        "image": "/image/xl7.png"
+                    },
+                    {
+                        "id": 2,
+                        "title": "All New Ertiga",
+                        "price": "207000000",
+                        "image": "/image/newertiga.png"
+                    },
+                    {
+                        "id": 3,
+                        "title": "All New Ertiga Suzuki Sport",
+                        "price": "252000000",
+                        "image": "/image/ertigasport.png"
+                    },
+                    {
+                        "id": 4,
+                        "title": "New Ignis",
+                        "price": "171000000",
+                        "image": "/image/ignis.png"
+                    }
+                ]
+            },
+            "list": [
+                {
+                    "id": 1,
+                    "title": "Beranda",
+                    "path": "/"
+                },
+                {
+                    "id": 2,
+                    "title": "Mobil",
+                    "path": "/Mobil"
+                },
+                {
+                    "id": 3,
+                    "title": "Service",
+                    "path": "/Service"
+                },
+                {
+                    "id": 4,
+                    "title": "Sparepart",
+                    "path": "/Blog"
+                },
+                {
+                    "id": 5,
+                    "title": "Tentang Kami",
+                    "path": "/TentangKami"
+                },
+                {
+                    "id": 6,
+                    "title": "Hubungi Kami",
+                    "path": "/HubungiKami"
+                }
+            ]
         }
     ],
     "dataPromo": [

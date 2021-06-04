@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300&display=swap');
-
+:root{
+    --primary : #163C80;
+    --white : #fff;
+    --black : #0f0f0f;
+    --shadow : 4px 8px 12px rgba(0,0,0,0.2);
+}
 body{
     margin: 0;
     padding: 0;
@@ -52,6 +57,15 @@ body{
 .rounded-circle{
     border-radius: 50%;
 }
+.rounded{
+    border-radius: 4px;
+}
+.rounded-md{
+    border-radius: 6px;
+}
+.rounded-lg{
+    border-radius: 8px;
+}
 .w-100{
     width: 100%;
 }
@@ -80,6 +94,9 @@ body{
 }
 .mt-3{
     margin-top: 16px;
+}
+.mt-4{
+    margin-top: 24px;
 }
 .mb-1{
     margin-bottom: 4px;
@@ -126,6 +143,9 @@ body{
 .p-4{
     padding: 24px;
 }
+.p-5{
+    padding:32px;
+}
 .py-1{
     padding-top: 4px;
     padding-bottom: 4px;
@@ -133,6 +153,13 @@ body{
 .py-2{
     padding-top: 8px;
     padding-bottom: 8px;
+}
+.py-3{
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+.px-1{
+    padding: 0 4px;
 }
 .px-2{
     padding-right: 8px;
@@ -144,6 +171,9 @@ body{
 }
 .pt-2{
     padding-top: 8px;
+}
+.pb-2{
+    padding-bottom: 8px;
 }
 .relative{
     position: relative;
@@ -226,6 +256,9 @@ ul li .child{
 .text-700{
     font-weight: 700;
 }
+.fs-20{
+    font-size: 20px;
+}
 .fs-18{
     font-size: 18px;
 }
@@ -245,20 +278,21 @@ ul li .child{
     font-size: 9px;
 }
 .text-white{
-    color: white;
+    color: var(--white);
 }
 .text-dark{
-    color: rgb(39, 39, 39);
+    color: var(--black);
+}
+.text-primary{
+    color: var(--primary);
 }
 .text-dark:hover{
-    color: rgb(148, 148, 148)
+    color: rgb(80, 80, 80)
 }
 .text-center{
     text-align: center;
 }
-.text-primary{
-    color: #163C80;
-}
+
 /* card */
 .card{
     background-color: white;
@@ -310,6 +344,20 @@ ul li .child{
 .btn-primary:hover{
     background-color: #163C80;
     color: white;
+}
+.btn-block-white{
+    background-color: transparent;
+    border-radius: 2px;
+    border: 1px solid white;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 8px 16px;
+    margin: 16px 0;
+}
+.btn-block-white:hover{
+    background-color: #fff;
+    color: var(--primary);
 }
 .inline{
     display: inline-block;
@@ -396,4 +444,48 @@ ul li .child{
     .prev,.next{
         font-size: 11px;
     }
+}
+/* cars card */
+.btn-detail-cars{
+    background-color: transparent;
+    border-radius: 3px;
+    color: rgb(83, 83, 83);
+}
+.btn-detail-cars:hover{
+    background-color: #163C80;
+    color: white;
+}
+.detail-sticky-bottom{
+    position: absolute;
+    width: 312px;
+    bottom: 0;
+    left: 0;
+    border-radius: 4px;
+    transform: translate(7%,-30%);
+}
+.card-service{
+    background-color: #fff;
+    padding:2px;
+    border-radius: 2px;
+}
+.card-service:hover{
+    background-color: rgb(185, 185, 185);
+}
+.text-decoration-none{
+    text-decoration: none;
+}
+.overlay-suku-cadang{
+    position: absolute;
+    background-color: rgba(7, 12, 87, 0.60) ;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    inset: 0;
+}
+.content-overlay{
+    position: absolute;
+    z-index: 2;
+    top:0;
+    left:0;
+    transform: translate(0,20%);
 }
