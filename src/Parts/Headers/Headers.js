@@ -82,9 +82,8 @@ class Headers extends Component {
                     <ul className="px-3 m-0">
                         {
                             dataHeader?.length > 0 ? (dataHeader?.map((item,i)=>{
-                                console.log(item);
                                 return(
-                                    <li className="pl-10">
+                                    <li className="pl-10" data={item} key={i}>
                                         <Link to={item.path} className="text-decoration-none child">{item.title}</Link>
                                     </li>
                                 )

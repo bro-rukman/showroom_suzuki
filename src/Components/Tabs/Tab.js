@@ -5,16 +5,17 @@ import RenderCardMobil from '../../Parts/RenderCards/RenderCardMobil'
 import {Link} from 'react-router-dom'
 
 export default function Tab(props) {
+    console.log(props);
     const [Toggle, setToggle] = useState(1)
     const toggleTab =(index)=>{
         setToggle(index)
     }
     return (
         <>
-                    <div className="bloc-tabs">
-                        <button className={Toggle === 1 ? "tabs active-tabs" : "tabs"} onClick={()=>toggleTab(1)}>Passenger Car</button>
-                        <button className={Toggle === 2 ? "tabs active-tabs" : "tabs"} onClick={()=>toggleTab(2)}>Commercial Car</button>
-                    </div>
+            <div className="bloc-tabs">
+                <button className={Toggle === 1 ? "tabs active-tabs" : "tabs"} onClick={()=>toggleTab(1)}>Passenger Car</button>
+                <button className={Toggle === 2 ? "tabs active-tabs" : "tabs"} onClick={()=>toggleTab(2)}>Commercial Car</button>
+            </div>
                 <div className="bg-white">
                 <div className="container">
                     <div className="content-tabs">

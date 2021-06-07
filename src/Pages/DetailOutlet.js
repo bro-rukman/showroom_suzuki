@@ -84,6 +84,24 @@ class DetailOutlet extends Component {
                 path : "/"
             },
         ]
+        const dataService =[
+            {
+                id:1,
+                image : ServiceImage,
+                title : "PEMESANAN SERVICE",
+                text : "Tetap nyaman dan aman berkendara dengan servis rutin kendaraan Suzuki",
+                text_button : "PESAN SEKARANG",
+                path : "/"
+            },
+            {
+                id:2,
+                image : SukuCadang,
+                title : "SUKU CADANG & AKSESORIS",
+                text : "Temukan berbagai suku cadang dan aksesoris kendaraan Suzuki Anda",
+                text_button : "SELENGKAPNYA",
+                path : "/"
+            },
+        ]
         return (
             <>
                 <Headers data={data}/>
@@ -122,30 +140,24 @@ class DetailOutlet extends Component {
                     </div>
                     <Tab data={data}/>
                     <div className="bg-white pt-2">
-                        <div className="relative">
-                            <img src={ServiceImage} alt="service" style={{width:'100%',display:'block'}}/>
-                            <div className="overlay-suku-cadang">
-                                <div className="content-overlay">
-                                    <div className="container text-center p-3">
-                                        <p className="fs-20 text-700 text-white py-1">PEMESANAN SERVICE</p>
-                                        <p className="fs-14 text-400 text-white py-2">Tetap nyaman dan aman berkendara dengan servis rutin kendaraan Suzuki</p>
-                                        <Link to="/" className="text-decoration-none"><button className="btn-block-white">PESAN SEKARANG</button></Link>
+                        {
+                            dataService?.length > 0 ? (dataService?.map((item,i)=>{
+                                return(
+                                    <div data={item} key={i} className="relative">
+                                        <img src={item.image} alt={item.title} style={{width:'100%',display:'block'}}/>
+                                        <div className="overlay-suku-cadang">
+                                            <div className="content-overlay">
+                                                <div className="container text-center p-3">
+                                                    <p className="fs-20 text-700 text-white py-1">{item.title}</p>
+                                                    <p className="fs-14 text-400 text-white py-2">{item.text}</p>
+                                                    <Link to={item.path} className="text-decoration-none"><button className="btn-block-white">{item.text_button}</button></Link>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="relative">
-                            <img src={SukuCadang} alt="suku cadang" style={{width:'100%',display:'block'}}/>
-                            <div className="overlay-suku-cadang">
-                                <div className="content-overlay">
-                                    <div className="container text-center p-3">
-                                        <p className="fs-20 text-700 text-white py-1">SUKU CADANG & <br /> AKSESORIS</p>
-                                        <p className="fs-14 text-400 text-white py-2">Temukan berbagai suku cadang dan aksesoris kendaraan Suzuki Anda</p>
-                                        <Link to="/" className="text-decoration-none"><button className="btn-block-white">SELENGKAPNYA</button></Link>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                                )
+                            })) : ("Loading...")
+                        }
                     </div>
                     <Footers data={data}/>
                     <div className="bg-primary" style={{height:'204px'}}>
