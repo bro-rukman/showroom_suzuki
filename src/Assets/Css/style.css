@@ -393,6 +393,16 @@ ul{
     background-color: var(--primary);
     color: var(--white);
 }
+.btn-link{
+    border: none;
+    background-color: transparent;
+    padding: 6px 8px;
+    color: var(--black);
+    cursor: pointer;
+}
+.border-active{
+    border-bottom: 1px solid #000;
+}
 .inline{
     display: inline-block;
     gap: 10px;
@@ -555,4 +565,13 @@ ul{
     left: 0;
     transform: translate(30%,50%);
     z-index: 1;
+}
+.bullet-color{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid wheat;
+}
+.bullet-color-active{
+    border: 1px solid var(--primary);
 }

@@ -81,7 +81,7 @@
                     "detail": [
                         {
                             "id": 1,
-                            "image": "/image/xl7red.png",
+                            "image": "/image/xl7gray.png",
                             "title": "RISING ORANGE & BLACKb",
                             "hex_code": "#C04C3C"
                         },
@@ -111,7 +111,7 @@
                     "detail": [
                         {
                             "id": 1,
-                            "image": "/image/xl7red.png",
+                            "image": "../image/xl7red.png",
                             "title": "RISING ORANGE & BLACKz",
                             "hex_code": "#C04C3C"
                         },

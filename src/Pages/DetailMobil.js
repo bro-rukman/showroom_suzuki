@@ -8,6 +8,7 @@ import RenderCardCarousel from '../Parts/RenderCards/RenderCardCarousel';
 import RenderTipeMobil from '../Parts/RenderCards/RenderTipeMobil';
 
 import {Gear} from '../Components/Asset/index'
+import { func } from 'prop-types';
 
 class DetailMobil extends Component {
     constructor(props){
@@ -18,13 +19,18 @@ class DetailMobil extends Component {
             active : 1,
             activeTabMobil : 1,
             dataDefault : {},
-            dataDetailMobil : undefined
+            dataDetailMobil : undefined,
+            // carousel
+            next : 'next',
+            prev : 'prev',
+            index : 0,
+            dataSlide : {}
         }
+         this.dataSlider =  this.dataSlider.bind(this)
     }
     componentDidMount(){
         let id = this.props.match.params.id
         axios.get(`${RootDevelopment}/cars/${id}`).then((res)=>{
-            console.log(res);
             this.setState({
                 dataMobil : res.data,
                 dataDefault : res.data.tipe[0]
@@ -49,17 +55,23 @@ class DetailMobil extends Component {
         })
     }
     toggleMobil=(id,item1)=>{
-        // this.state.activeTabMobil === id ? 
         this.setState({
             activeTabMobil : id,
             dataDetailMobil : item1
         })
     }
+    async dataSlider(){
+        const a = await this.state.dataDefault
+        const b = await this.state.dataDetailMobil
+        const c = b === undefined ? a : b
+        console.log(c);
+        this.setState({
+            dataSlide : c
+        })
+    }
     render() {
         const dataMobil = this.state.dataMobil
-        console.log(dataMobil);
         const tipeMobil = dataMobil.tipe
-        console.log(tipeMobil);
         let id = this.state.activeTabMobil
         const dataDefault = this.state.dataDefault
         console.log(dataDefault);
@@ -68,11 +80,36 @@ class DetailMobil extends Component {
         const dataDef = !dataDefaultMobil ?  dataDefault : dataDefaultMobil
         console.log(dataDef);
         const dataCabang = this.state.dataCabang
-        console.log(dataCabang);
         const active = this.state.active
+        const slide = this.state.dataSlide
+        console.log(slide);
+        function prevSlide(){
+            const lastindex = dataDef.detail.length -1
+            const resetIndex = this.state.index === 0
+            const index = resetIndex ? lastindex : this.state.index-1
+            this.setState({
+                index : index
+            })
+        }
+        function nextSlide(){
+            const lasindex = dataDef.detail.length -1
+            const resetIndex = this.state.index === lasindex
+            const index = resetIndex ? 0 : this.state.index+1
+            this.setState({
+                index : index
+            })
+        }
+        const index = this.state.index
+        // let firstShowView = dd.slice(index,index+3)
+        // console.log(firstShowView);
         let text = "Suzuki XL7 hadir dengan tampilan maskulin, tangguh dan berkarakter. Desain modern SUV 7-Seater memberikan kebanggaan dan kepercayaan bagi penggunanya. Dilengkapi dengan fitur canggih semakin membuat XL7 menjadi SUV yang luar biasa di kelasnya"
         return (
             <>
+            {/* {
+                dd.map((it,i)=>{
+                    console.log(it);
+                })
+            } */}
                 <Headers data={dataCabang}/>
                 <div className="w-375 mx-auto box-shadow">
                     <div className="container">
@@ -93,13 +130,12 @@ class DetailMobil extends Component {
                         <div className="carousel-card">
                             {
                                 dataMobil?.carousel?.length > 0 ? (dataMobil?.carousel?.map((item,i)=>{
-                                    console.log(item);
                                     return( <RenderCardCarousel data={item} key={i}/>
                                     )
                                 })) : ("No data")
                             }
                         </div>
-                        <div className="bg-primary mb-3">
+                        <div className="bg-primary">
                             <div className="w-85 mx-auto py-2">
                                 <img src={Gear} alt="" style={{width:'100%',display:'block'}}/>
                                 <p className="text-center text-white fs-14 text-400 py-2">{text}</p>
@@ -118,23 +154,41 @@ class DetailMobil extends Component {
                             <div className="container">
                                 <p className="text-600 fs-18 text-center py-3">Tipe & Warna</p>
                                 <div className="my-2 d-flex justify-content-center gap-2">
-                                    {/* <RenderTipeMobil data={tipeMobil}/> */}
-
                                     {
                                         tipeMobil?.length > 0 ? (tipeMobil?.map((item1,i)=>{
                                             return(
-                                                <button key={i} data={item1} onClick={()=>this.toggleMobil(item1.id,item1)}>{item1.name}</button>
+                                                <div className="mb-2" key={i} data={item1}>
+                                                    <button onClick={()=>this.toggleMobil(item1.id,item1)} className={id === item1.id ? " btn-link text-600 fs-12 border-active" : 'btn-link text-600 fs-12'}>{item1.name}</button>
+                                                </div>
                                             )
                                         })) : ("No Data")
                                     }
                                 </div>
-                                <div>
+                                <div className="d-flex">
                                     {
                                         dataDef?.detail?.length > 0 ? (dataDef?.detail?.map((detail,i)=>{
                                             return(
-                                                <div data={detail} key={i}>{detail.title}</div>
+                                                <>
+                                                <div>
+                                                    <img src={detail.image} alt="mobil" style={{display:'block'}}/>
+                                                    <div data={detail} key={i}>{detail.title}</div>
+                                                </div>
+                                                </>
                                             )
-                                        })) : ("no")
+                                        })) : ("no data")
+                                    }
+                                </div>
+                                <div className="d-flex justify-content-center gap-2 align-items-center">
+                                    {
+                                        dataDef?.detail?.length > 0 ? (dataDef?.detail?.map((color,i)=>{
+                                            return(
+                                                <div data={color} key={i}>
+                                                    <div>
+                                                        <span className={id === color.id ? ` bullet-color bullet-color-active` : "bullet-color"}>o</span>
+                                                    </div>
+                                                </div>
+                                            )
+                                        })) : ("No data")
                                     }
                                 </div>
                             </div>
