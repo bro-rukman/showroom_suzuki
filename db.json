@@ -52,26 +52,8 @@
                         {
                             "id": 1,
                             "image": "/image/xl7red.png",
-                            "title": "RISING ORANGE & BLACKa",
+                            "title": "RISING ORANGE & BLACK",
                             "hex_code": "#C04C3C"
-                        },
-                        {
-                            "id": 2,
-                            "image": "/image/xl7red.png",
-                            "title": "RISING ORANGE & BLACK",
-                            "hex_code": "#AE923D"
-                        },
-                        {
-                            "id": 3,
-                            "image": "/image/xl7red.png",
-                            "title": "RISING ORANGE & BLACK",
-                            "hex_code": "#000000"
-                        },
-                        {
-                            "id": 4,
-                            "image": "/image/xl7red.png",
-                            "title": "RISING ORANGE & BLACK",
-                            "hex_code": "#FFFFFF"
                         }
                     ]
                 },
@@ -82,26 +64,8 @@
                         {
                             "id": 1,
                             "image": "/image/xl7gray.png",
-                            "title": "RISING ORANGE & BLACKb",
+                            "title": "RISING ORANGE & BLACK",
                             "hex_code": "#C04C3C"
-                        },
-                        {
-                            "id": 2,
-                            "image": "/image/xl7red.png",
-                            "title": "RISING ORANGE & BLACK",
-                            "hex_code": "#AE923D"
-                        },
-                        {
-                            "id": 3,
-                            "image": "/image/xl7red.png",
-                            "title": "RISING ORANGE & BLACK",
-                            "hex_code": "#000000"
-                        },
-                        {
-                            "id": 4,
-                            "image": "/image/xl7red.png",
-                            "title": "RISING ORANGE & BLACK",
-                            "hex_code": "#FFFFFF"
                         }
                     ]
                 },
@@ -112,26 +76,8 @@
                         {
                             "id": 1,
                             "image": "../image/xl7red.png",
-                            "title": "RISING ORANGE & BLACKz",
+                            "title": "RISING ORANGE & BLACK",
                             "hex_code": "#C04C3C"
-                        },
-                        {
-                            "id": 2,
-                            "image": "/image/xl7red.png",
-                            "title": "RISING ORANGE & BLACK",
-                            "hex_code": "#AE923D"
-                        },
-                        {
-                            "id": 3,
-                            "image": "/image/xl7red.png",
-                            "title": "RISING ORANGE & BLACK",
-                            "hex_code": "#000000"
-                        },
-                        {
-                            "id": 4,
-                            "image": "/image/xl7red.png",
-                            "title": "RISING ORANGE & BLACK",
-                            "hex_code": "#FFFFFF"
                         }
                     ]
                 }
@@ -188,6 +134,100 @@
                     "id": 5,
                     "image": "/image/interior5.png",
                     "title": "1ST & 2ND ROW CENTER ARM REST"
+                }
+            ],
+            "spesifikasi": [
+                {
+                    "id": 1,
+                    "title": "DIMENSI",
+                    "detail": [
+                        {
+                            "id": 1,
+                            "text": "Dimensi"
+                        }
+                    ]
+                },
+                {
+                    "id": 2,
+                    "title": "MESIN",
+                    "detail": [
+                        {
+                            "id": 1,
+                            "text": "Mesin"
+                        }
+                    ]
+                },
+                {
+                    "id": 3,
+                    "title": "TRANSMISI",
+                    "detail": [
+                        {
+                            "id": 1,
+                            "text": "Transmisi"
+                        }
+                    ]
+                },
+                {
+                    "id": 4,
+                    "title": "BERAT",
+                    "detail": [
+                        {
+                            "id": 1,
+                            "text": "Berat"
+                        }
+                    ]
+                },
+                {
+                    "id": 5,
+                    "title": "RANGKA",
+                    "detail": [
+                        {
+                            "id": 1,
+                            "text": "Rangka"
+                        }
+                    ]
+                },
+                {
+                    "id": 6,
+                    "title": "KAPASITAS",
+                    "detail": [
+                        {
+                            "id": 1,
+                            "text": "Kapasitas"
+                        }
+                    ]
+                }
+            ],
+            "harga": [
+                {
+                    "id": 1,
+                    "name": "XL7 ZETA M/T",
+                    "price": "232000000"
+                },
+                {
+                    "id": 1,
+                    "name": "XL7 ZETA A/T",
+                    "price": "242500000"
+                },
+                {
+                    "id": 1,
+                    "name": "XL7 BETA M/T",
+                    "price": "248500000"
+                },
+                {
+                    "id": 1,
+                    "name": "XL7 BETA A/T",
+                    "price": "259000000"
+                },
+                {
+                    "id": 1,
+                    "name": "XL7 ALPHA M/T",
+                    "price": "258500000"
+                },
+                {
+                    "id": 1,
+                    "name": "XL7 ALPHA A/T",
+                    "price": "269000000"
                 }
             ]
         },

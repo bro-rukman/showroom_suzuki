@@ -48,7 +48,9 @@ class CarouselItem extends Component {
     }
     render() {
         const index = this.state.currentIndex
-        let firstShowView = this.state.data.slice(index,index+3)
+        const l = this.state.data
+        console.log(l);
+        let firstShowView = this.state.data.slice(index,index+3)    
         console.log(firstShowView);
         if (firstShowView.length < 4) {
             firstShowView = firstShowView.concat(this.state.data.slice(0,3 - firstShowView.length))
