@@ -349,6 +349,7 @@ ul{
     border-radius: 2px;
     padding: 12px 20px;
     text-align: center;
+    color: white;
 }
 .btn-block:hover{
     background-color:#163C80 ;
@@ -357,17 +358,28 @@ ul{
     color: white;
 }
 .btn-primary{
-    border: 2px solid #163C80;
-    background-color: transparent;
+    background-color: var(--primary);
+    border: none;
     border-radius: 2px;
-    padding: 12px 20px;
     text-align: center;
-    color: #163C80;
-    width: 100%;
+    color: var(--white);
 }
 .btn-primary:hover{
-    background-color: #163C80;
+    background-color: var(--white);
+    border: 1px solid var(--primary);
+    color: var(--primary);
+}
+.btn-outline-primary{
+    border: 2px solid #163C80;
+    border-radius: 2px;
+    text-align: center;
+    background-color: #fff;
+    color: var(--primary);
+}
+.btn-outline-primary:hover{
+    background-color: var(--primary);
     color: white;
+
 }
 .btn-block-white{
     background-color: transparent;
@@ -657,4 +669,12 @@ ul{
     left: 0;
     bottom: 0;
     transform: translate(0,-70%);
+}
+.bar-absolute{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    transform: translate(0,-20%);
 }

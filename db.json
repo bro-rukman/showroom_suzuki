@@ -143,7 +143,51 @@
                     "detail": [
                         {
                             "id": 1,
-                            "text": "Dimensi"
+                            "text": "Panjang Keseluruhan",
+                            "size": "4450",
+                            "satuan": "mm"
+                        },
+                        {
+                            "id": 2,
+                            "text": "Lebar Keseluruhan",
+                            "size": "1775",
+                            "satuan": "mm"
+                        },
+                        {
+                            "id": 3,
+                            "text": "Tinggi Keseluruhan",
+                            "size": "1710",
+                            "satuan": "mm"
+                        },
+                        {
+                            "id": 4,
+                            "text": "Jarak Poros Roda",
+                            "size": "2740",
+                            "satuan": "mm"
+                        },
+                        {
+                            "id": 5,
+                            "text": "Jarak Pijak Depan",
+                            "size": "1515",
+                            "satuan": "mm"
+                        },
+                        {
+                            "id": 6,
+                            "text": "Jarak Pijak Belakang",
+                            "size": "1530",
+                            "satuan": "mm"
+                        },
+                        {
+                            "id": 7,
+                            "text": "Jarak Terendah",
+                            "size": "5.1",
+                            "satuan": "  "
+                        },
+                        {
+                            "id": 8,
+                            "text": "Radius Putar Minimum",
+                            "size": "200",
+                            "satuan": "mm"
                         }
                     ]
                 },

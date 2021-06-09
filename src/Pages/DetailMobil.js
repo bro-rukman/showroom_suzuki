@@ -6,8 +6,9 @@ import {Link} from 'react-router-dom'
 import '../Assets/Css/style.css'
 import RenderCardCarousel from '../Parts/RenderCards/RenderCardCarousel';
 import RenderCardAccordion from '../Parts/RenderCards/RenderCardAccordion';
-import {Gear} from '../Components/Asset/index'
-import { func } from 'prop-types';
+import {Gear,Whatsapp,Simulasi} from '../Components/Asset/index'
+import {FormatHarga} from '../Configs/FormatHarga/FormatHarga'
+import Footers from '../Parts/Footers/Footers';
 
 class DetailMobil extends Component {
     constructor(props){
@@ -25,9 +26,11 @@ class DetailMobil extends Component {
             index : 0,
             dataSlide : []
         }
+        this.myRef = React.createRef()
          this.handleSlider =  this.handleSlider.bind(this)
     }
     componentDidMount(){
+        
         let id = this.props.match.params.id
         axios.get(`${RootDevelopment}/cars/${id}`).then((res)=>{
             this.setState({
@@ -48,7 +51,31 @@ class DetailMobil extends Component {
             console.log(error);
         })
     }
-    toggleTab=(id)=>{
+    toggleTab=(id,path)=>{
+        console.log(path);
+        // const pathName = path
+        // const splitPath = pathName.split("#")
+        // const slicePath = splitPath.slice(0,2)
+        // console.log(slicePath);
+        // const getSlice = slicePath[1]
+        // console.log(getSlice);
+        const elementId = document.getElementById(["Overview","Tips","Eksterior","Interior","Spesifikasi","Daftar"])
+        const overview = document.getElementById("Overview")
+        // overview.scrollIntoView({behavior:'smooth'})
+        const tips = document.getElementById("Tips")
+        // tips.scrollIntoView({behavior:'smooth'})
+        // const eksterior = document.getElementById("Eksterior")
+        // eksterior.scrollIntoView({behavior:'smooth'})
+        // const interior = document.getElementById("Interior")
+        // interior.scrollIntoView({behavior:'smooth'})
+        // const spesifikasi = document.getElementById("Spesifikasi")
+        // spesifikasi.scrollIntoView({behavior:'smooth'})
+        // const daftar = document.getElementById("Daftar")
+        // daftar.scrollIntoView({behavior:'smooth'})
+        // if (getSlice === overview) {
+        //     window.scrollTo(0,300)
+        // }else if(getSlice === tips)
+        //     tips.scrollIntoView()
         this.setState({
             active : id
         })
@@ -86,6 +113,8 @@ class DetailMobil extends Component {
         })
     }
     render() {
+        let tips = document.getElementById("Tips")
+
         // window.addEventListener('scroll',()=>{
         //     this.handleSlider()
         //     const scroll = window.scrollY;
@@ -116,7 +145,6 @@ class DetailMobil extends Component {
         let text = "Suzuki XL7 hadir dengan tampilan maskulin, tangguh dan berkarakter. Desain modern SUV 7-Seater memberikan kebanggaan dan kepercayaan bagi penggunanya. Dilengkapi dengan fitur canggih semakin membuat XL7 menjadi SUV yang luar biasa di kelasnya"
         return (
             <>
-            <button onClick={this.handleSlider}>cek</button>
                 <Headers data={dataCabang}/>
                 <div className="w-375 mx-auto box-shadow">
                     <div className="container">
@@ -128,7 +156,9 @@ class DetailMobil extends Component {
                                 dataMobil?.menu?.length > 0 ? (dataMobil?.menu?.map((item,index)=>{
                                     return(
                                         <li data={item} key={index}>
-                                            <Link to={item.path} className="text-decoration-none" ><button style={{whiteSpace:'nowrap',cursor:'pointer'}} onClick={()=>this.toggleTab(item.id)} className={item.id === active ? " no-border bg-transparent px-3 py-2 bg-primary text-white" : " no-border bg-transparent px-3 py-2"}>{item.title}</button></Link>
+                                            {/* <button style={{whiteSpace:'nowrap',cursor:'pointer'}} onClick={()=>this.toggleTab(item.id,item.path)} className={item.id === active ? " no-border bg-transparent px-3 py-2 bg-primary text-white" : " no-border bg-transparent px-3 py-2"}>{item.title}</button> */}
+                                            <a href={item.path} className="text-decoration-none"><button style={{whiteSpace:'nowrap',cursor:'pointer'}} onClick={()=>this.toggleTab(item.id,item.path)} className={item.id === active ? " no-border bg-transparent px-3 py-2 bg-primary text-white" : " no-border bg-transparent px-3 py-2"}>{item.title}</button></a>
+                                            {/* <Link to={item.path} className="text-decoration-none" ><button style={{whiteSpace:'nowrap',cursor:'pointer'}} onClick={()=>this.toggleTab(item.id)} className={item.id === active ? " no-border bg-transparent px-3 py-2 bg-primary text-white" : " no-border bg-transparent px-3 py-2"}>{item.title}</button></Link> */}
                                         </li>
                                     )
                                 })) : ("my-3 no-border bg-transparent px-3 py-2")
@@ -159,7 +189,7 @@ class DetailMobil extends Component {
                         </div>
                         <div className="bg-white">
                             <div className="container">
-                                <p className="text-600 fs-18 text-center py-3">Tipe & Warna</p>
+                                <p className="text-600 fs-18 text-center py-3" id="Tips">Tipe & Warna</p>
                                 <div className="my-2 d-flex justify-content-center gap-2">
                                     {
                                         tipeMobil?.length > 0 ? (tipeMobil?.map((item1,i)=>{
@@ -201,7 +231,7 @@ class DetailMobil extends Component {
                             </div>
                             </div>
                                 <div className="bg-primary mb-2">
-                                    <h5 className="fs-18 text-600 text-white text-center pt-3">Eksterior</h5>
+                                    <h5 className="fs-18 text-600 text-white text-center pt-3" id="Eksterior">Eksterior</h5>
                                     <div className="grid-container">
                                         {
                                             eksterior?.length > 0 ? (eksterior?.map((eks,i)=>{
@@ -224,7 +254,7 @@ class DetailMobil extends Component {
                                     </div>
                                 </div>
                                 <div className="bg-primary mb-2">
-                                    <h5 className="fs-18 text-600 text-white text-center pt-3">Interior</h5>
+                                    <h5 className="fs-18 text-600 text-white text-center pt-3" id="Interior">Interior</h5>
                                     <div className="grid-container">
                                         {
                                             interior?.length > 0 ? (interior?.map((eks,i)=>{
@@ -246,10 +276,10 @@ class DetailMobil extends Component {
                                         </Link>
                                     </div>
                                 </div>
-                                <div className="bg-white">
+                                <div className="bg-white mb-2">
                                     <div className="container">
-                                    <h5 className="fs-18 text-600 text-center py-3">Spesifikasi</h5>
-                                    <div>
+                                    <h5 className="fs-18 text-600 text-center py-3" id="Spesifikasi">Spesifikasi</h5>
+                                    <div className="pb-2">
                                         {
                                             spesifikasi?.length > 0 ? (spesifikasi?.map((spek,i)=>{
                                                 return <RenderCardAccordion data={spek} key={i}/>
@@ -258,7 +288,45 @@ class DetailMobil extends Component {
                                     </div>
                                     </div>
                                 </div>
-                        
+                        <div className="bg-white mb-3">
+                            <div className="container">
+                            <h5 className="text-center fs-16 text-600 pt-3" id="Daftar">Daftar Harga <br /> {dataMobil.title}</h5>
+                            <div>
+                                {
+                                    harga?.length > 0 ? (harga?.map((harga,i)=>{
+                                        return(
+                                            <div className="d-flex justify-content-between align-items-center p-3 bg-light rounded box-shadow mb-3">
+                                                <p className="fs-14 text-600">{harga.name}</p>
+                                                <p className="fs-14 text-600">{"Rp "}{FormatHarga(harga.price)}</p>
+                                            </div>
+                                        )
+                                    })) : ('no data')
+                                }
+                            </div>
+                            <div className="text-center py-3">
+                                <Link to="/" className="text-decoration-none"><button className="btn-outline-primary fs-16 text-600 px-3 py-2">Lihat Semua Harga Mobil</button></Link>
+                            </div>
+                            </div>
+                        </div>
+                        <Footers data={dataCabang}/>
+                        <div className="bg-primary relative" style={{height:'204px'}}>
+                            <p className="text-300 fs-14 text-white text-center p-3 m-0" style={{paddingTop:'23px'}}>&copy; 2020 Suzuki Indonesia <br /> All rights reserved</p>
+                                <div className="bar-absolute">
+                                    <div className="container">
+                                    <div className="bg-white d-flex justify-content-between align-items-center rounded-lg p-2">
+                                        <button className="btn-primary py-2 px-3 fs-14 text-600">Booking Mobil</button>
+                                        <div className="card-service">
+                                            <img src={Whatsapp} alt="" className="mx-auto " style={{display:'block'}}/>
+                                            <p className="fs-10 text-dark text-600 mt-2" style={{textAnchor:'none'}}>Whatsapp</p>
+                                        </div>
+                                        <div className="card-service">
+                                            <img src={Simulasi} alt="" className="mx-auto " style={{display:'block'}}/>
+                                            <p className="fs-10 text-dark text-600 mt-2" style={{textAnchor:'none'}}>Simulasi Kredit</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                 </div>
             </>
         );
