@@ -13,51 +13,52 @@ class DetailOutlet extends Component {
         super(props)
         this.state={
             dataOutlet : {},
-            detailOutlet : {}
+            detailOutlet : {},
+            detailCarousel : [],
+            currentIndex : 0,
+            arrowNext : 'next',
+            arrowPrev : 'prev',
         }
+        this.prevSlide = this.prevSlide.bind(this)
+        this.nextSlide=this.nextSlide.bind(this)
     }
     componentDidMount(){
         let id = this.props.match.params.id
         axios.get(`${RootDevelopment}/dataCabang/${id}`).then((res)=>{
+            console.log(res);
             this.setState({
                 dataOutlet : res.data,
-                detailOutlet : res.data.detail
+                detailOutlet : res.data.detail,
+                detailCarousel : res.data.detail.carousel
             })
         }).catch(error=>{
             console.log(error);
         })
     }
+    prevSlide (){
+        const lasIndex = this.state.detailCarousel.length -1
+        const resetIndex = this.state.currentIndex === 0;
+        const index = resetIndex ? lasIndex : this.state.currentIndex-1
+        this.setState({
+            currentIndex : index
+        })
+    }
+    nextSlide(){
+        const lastIndex = this.state.detailCarousel.length-1
+        const resetIndex = this.state.currentIndex === lastIndex
+        const index = resetIndex ? 0 : this.state.currentIndex+1
+        this.setState({
+            currentIndex : index
+        })
+    }
     render() {
+        const index = this.state.currentIndex
+        let firstShowView = this.state.detailCarousel.slice(index,index+3)    
+        console.log(firstShowView);
+        if (firstShowView.length < 4) {
+            firstShowView = firstShowView.concat(this.state.detailCarousel.slice(0,3 - firstShowView.length))
+        }
         const data = this.state.dataOutlet
-        const detailOutlet = this.state.detailOutlet
-        const detailCarousel = detailOutlet.carousel
-        var slideIndex = 1
-        showSlides(slideIndex);
-        function PlusSlides(n){
-            showSlides(slideIndex += n)
-        }
-        function currentSlide(n){
-            showSlides(slideIndex=n)
-        }
-        function showSlides(n){
-            var i;
-            var slides = document.getElementsByClassName("slider")
-            var dots = document.getElementsByClassName('dot')
-            if (n>slides.length) {
-                slideIndex = 1
-            }
-            if(n<1){
-                slideIndex = slides.length
-            }
-            for (i =0;i < slides.length;i++) {
-                slides[i].style.display="none"
-            }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace("active","")
-            }
-            // slides[slideIndex-1].style.display ="block";
-            // dots[slideIndex-1].className+="active"
-        }
         const barBottom =[
             {
                 id:1,
@@ -106,35 +107,25 @@ class DetailOutlet extends Component {
             <>
                 <Headers data={data}/>
                 <div className="w-375 mx-auto box-shadow relative">
-                {
-                        detailCarousel?.map((carousel,i)=>{
-                            return(
-                                <div data={carousel} key={i}>
-                                    <img src={carousel.image} alt="carousel" style={{width:'100%',display:'block'}}/>
-                                </div>
-                            )
-                        })
-                    }
-                    {/* <div>
-                        <div className="slide-container">
-                            <div className="slider fade">
-                                <img src={CarouselImage} alt="" style={{width:'100%'}}/>
-                            </div>
-                            <div className="slider fade">
-                                <img src={CarouselImage} alt="" style={{width:'100%'}}/>
-                            </div>
-                            <div className="slider fade">
-                                <img src={CarouselImage} alt="" style={{width:'100%'}}/>
-                            </div>
-                            <a className="prev" onClick={PlusSlides(-1)}>&#10094;</a>
-                            <a className="next" onClick={PlusSlides(1)}>&#10095;</a>
+                        <div className="d-flex justify-content-center" style={{overflow:'hidden'}}>
+                            {
+                                firstShowView?.map((carousel,i)=>{
+                                    console.log(carousel);
+                                    return(
+                                        <div data={carousel} key={i}>
+                                            <div>
+                                                <img src={carousel.image} alt="carousel" style={{height : '375px',display:'block'}}/>
+                                            </div>
+                                            <p className="text-primary text-center">{carousel.id}</p>
+                                        </div>
+                                    )
+                                })
+                            }
                         </div>
-                        <div style={{textAlign:'center'}}>
-                            <span className="dot" onClick={currentSlide(1)}></span>
-                            <span className="dot" onClick={currentSlide(2)}></span>
-                            <span className="dot" onClick={currentSlide(3)}></span>
+                        <div className="d-flex justify-content-center gap-3 my-2">
+                            <button onClick={this.prevSlide} className="btn-white m-0">{this.state.arrowPrev}</button>
+                            <button onClick={this.nextSlide} className="btn-white">{this.state.arrowNext}</button>
                         </div>
-                    </div> */}
                     <div className="bg-primary" style={{height:'146px'}}>
                         <p className="text-600 fs-18 text-white text-center p-3 m-0" style={{paddingTop:'30px'}}>Temukan Mobil Suzuki yang <br /> tepat untuk Anda</p>
                     </div>
@@ -181,6 +172,7 @@ class DetailOutlet extends Component {
                             }
                         </div>
                     </div>
+
                 </div>
             </>
         );

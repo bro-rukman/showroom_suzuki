@@ -31,7 +31,6 @@ class Modal extends Component {
     }
     render() {
         const mobil = this.props.data
-        console.log(mobil);
         const mobilType = mobil.tipe
         const hargaMobil = mobil.harga
         if(!this.props.showModal){
@@ -55,9 +54,8 @@ class Modal extends Component {
                                 <input type="text" name="" id="" placeholder="No Handphone" className="input-transparent w-100 py-2"/>
                                 <hr />
                                 <br />
-                                <div className="w-75">
                                     <div className="d-flex justify-content-between gap-2">
-                                        <div>
+                                        <div className="w-100">
                                             <small className="text-400 px-1">Mobil</small>
                                             <br />
                                             <select name="cars" id="" className="p-0 no-border">
@@ -71,7 +69,7 @@ class Modal extends Component {
                                             </select>
                                             <hr />
                                         </div>
-                                        <div>
+                                        <div className="w-100">
                                             <small className="text-400 px-1">Mobil</small>
                                             <br />
                                             <select name="cars" id="" className="p-0 no-border">
@@ -86,7 +84,6 @@ class Modal extends Component {
                                             <hr />
                                         </div>
                                     </div>
-                                </div>
                                 <div className="d-flex justify-content-between align-items-center gap-2 mt-3">
                                     <div className="w-100">
                                         <button className="btn-link w-100 fs-14 text-700" onClick={this.handleCancel}>cancel</button>

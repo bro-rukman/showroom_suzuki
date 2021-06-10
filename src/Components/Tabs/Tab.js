@@ -5,7 +5,6 @@ import RenderCardMobil from '../../Parts/RenderCards/RenderCardMobil'
 import {Link} from 'react-router-dom'
 
 export default function Tab(props) {
-    console.log(props);
     const [Toggle, setToggle] = useState(1)
     const toggleTab =(index)=>{
         setToggle(index)

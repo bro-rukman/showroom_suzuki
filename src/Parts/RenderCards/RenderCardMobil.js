@@ -4,7 +4,6 @@ import '../../Assets/Css/style.css'
 import {FormatHarga} from '../../Configs/FormatHarga/FormatHarga'
 
 export default function RenderCardMobil(item) {
-    console.log(item);
     return (
         <div className="py-2">
             <div className="d-flex align-items-center mb-4 gap-3">

@@ -10,6 +10,16 @@
                     "id": 1,
                     "image": "/image/carouselcars.png",
                     "sub_image": "/image/extraordinary.png"
+                },
+                {
+                    "id": 2,
+                    "image": "/image/carouselcars.png",
+                    "sub_image": "/image/extraordinary.png"
+                },
+                {
+                    "id": 3,
+                    "image": "/image/carouselcars.png",
+                    "sub_image": "/image/extraordinary.png"
                 }
             ],
             "menu": [
@@ -1225,6 +1235,14 @@
                 "carousel": [
                     {
                         "id": 1,
+                        "image": "/image/carousel1.png"
+                    },
+                    {
+                        "id": 2,
+                        "image": "/image/carousel1.png"
+                    },
+                    {
+                        "id": 3,
                         "image": "/image/carousel1.png"
                     }
                 ],

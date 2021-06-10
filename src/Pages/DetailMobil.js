@@ -9,7 +9,6 @@ import RenderCardAccordion from '../Parts/RenderCards/RenderCardAccordion';
 import {Gear,Whatsapp,Simulasi} from '../Components/Asset/index'
 import {FormatHarga} from '../Configs/FormatHarga/FormatHarga'
 import Footers from '../Parts/Footers/Footers';
-// import Modal from 'react-modal'
 import Modal from '../Components/Modal/Modal'
 
 class DetailMobil extends Component {
@@ -27,10 +26,16 @@ class DetailMobil extends Component {
             prev : 'prev',
             index : 0,
             dataSlide : [],
-            showModal : false
+            showModal : false,
+            // carousel1
+            dataCarousel : [],
+            currentIndex : 0,
+            arrowPrev : 'prev',
+            arrowNext : 'next'
         }
-        this.myRef = React.createRef()
          this.handleSlider =  this.handleSlider.bind(this)
+         this.prevSlide = this.prevSlide.bind(this)
+         this.nextSlide = this.nextSlide.bind(this)
     }
     componentDidMount(){
         
@@ -38,7 +43,8 @@ class DetailMobil extends Component {
         axios.get(`${RootDevelopment}/cars/${id}`).then((res)=>{
             this.setState({
                 dataMobil : res.data,
-                dataDefault : res.data.tipe[0].detail
+                dataDefault : res.data.tipe[0].detail,
+                dataCarousel : res.data.carousel
             })
         }).catch(error=>{
             console.log(error);
@@ -53,21 +59,6 @@ class DetailMobil extends Component {
     closeModal=()=>{
         this.setState({
             showModal : !this.state.showModal
-        })
-    }
-    handleModal=()=>{
-        this.setState({
-            showModal : true
-        })
-    }
-    handleClose=()=>{
-        this.setState({
-            showModal : false
-        })
-    }
-    handleOpen=()=>{
-        this.setState({
-            showModal : true
         })
     }
     fetchDataCabang=()=>{
@@ -85,7 +76,6 @@ class DetailMobil extends Component {
         })
     }
     toggleMobil=(id,detail)=>{
-        console.log(detail);
         this.setState({
             activeTabMobil : id,
             dataDetailMobil : detail
@@ -101,7 +91,7 @@ class DetailMobil extends Component {
         })
     }
     prevSlide(){
-        const lastindex = this.state.dataSlide.length -1
+        const lastindex = this.state.dataCarousel.length -1
         const resetIndex = this.state.index === 0
         const index = resetIndex ? lastindex : this.state.index-1
         this.setState({
@@ -109,7 +99,7 @@ class DetailMobil extends Component {
         })
     }
     nextSlide(){
-        const lasindex = this.state.dataSlide.length -1
+        const lasindex = this.state.dataCarousel.length -1
         const resetIndex = this.state.index === lasindex
         const index = resetIndex ? 0 : this.state.index+1
         this.setState({
@@ -118,7 +108,6 @@ class DetailMobil extends Component {
     }
     render() {
         const dataMobil = this.state.dataMobil
-        console.log(dataMobil);
         const tipeMobil = dataMobil.tipe
         const eksterior = dataMobil.eksterior
         const interior = dataMobil.interior
@@ -126,25 +115,22 @@ class DetailMobil extends Component {
         const harga = dataMobil.harga
         let id = this.state.activeTabMobil
         const dataDefault = this.state.dataDefault
-        console.log(dataDefault);
         const dataSlideMobil = this.state.dataDetailMobil
         const stateDataDef = !dataSlideMobil ? dataDefault : dataSlideMobil
-        console.log(stateDataDef);
         const dataCabang = this.state.dataCabang
         const active = this.state.active
         const index = this.state.index
-        console.log(this.state.dataSlide);
-        let firstShowView = this.state.dataSlide.slice(index,index+2)
-        if (firstShowView.length < 3) {
-            firstShowView = firstShowView.concat(this.state.dataSlide.slice(0,2 - firstShowView.length))
+
+        let firstShowView = this.state.dataCarousel.slice(index,index+3)
+        if (firstShowView.length < 4) {
+            firstShowView = firstShowView.concat(this.state.dataCarousel.slice(0,3 - firstShowView.length))
         }
         
         let text = "Suzuki XL7 hadir dengan tampilan maskulin, tangguh dan berkarakter. Desain modern SUV 7-Seater memberikan kebanggaan dan kepercayaan bagi penggunanya. Dilengkapi dengan fitur canggih semakin membuat XL7 menjadi SUV yang luar biasa di kelasnya"
         return (
             <>
-            
                 <Headers data={dataCabang}/>
-                <div className="w-375 mx-auto box-shadow">
+                <div className="w-375 mx-auto box-shadow relative">
                     <div className="container">
                         <p className="text-700 fs-16 py-2">{dataMobil.title}</p>
                     </div>
@@ -154,21 +140,23 @@ class DetailMobil extends Component {
                                 dataMobil?.menu?.length > 0 ? (dataMobil?.menu?.map((item,index)=>{
                                     return(
                                         <li data={item} key={index}>
-                                            {/* <button style={{whiteSpace:'nowrap',cursor:'pointer'}} onClick={()=>this.toggleTab(item.id,item.path)} className={item.id === active ? " no-border bg-transparent px-3 py-2 bg-primary text-white" : " no-border bg-transparent px-3 py-2"}>{item.title}</button> */}
                                             <a href={item.path} className="text-decoration-none"><button style={{whiteSpace:'nowrap',cursor:'pointer'}} onClick={()=>this.toggleTab(item.id,item.path)} className={item.id === active ? " no-border bg-transparent px-3 py-2 bg-primary text-white" : " no-border bg-transparent px-3 py-2"}>{item.title}</button></a>
-                                            {/* <Link to={item.path} className="text-decoration-none" ><button style={{whiteSpace:'nowrap',cursor:'pointer'}} onClick={()=>this.toggleTab(item.id)} className={item.id === active ? " no-border bg-transparent px-3 py-2 bg-primary text-white" : " no-border bg-transparent px-3 py-2"}>{item.title}</button></Link> */}
                                         </li>
                                     )
                                 })) : ("my-3 no-border bg-transparent px-3 py-2")
                             }
                         </ul>
-                        <div className="carousel-card">
+                        <div className="d-flex justify-content-center" style={{overflow:'hidden'}}>
                             {
-                                dataMobil?.carousel?.length > 0 ? (dataMobil?.carousel?.map((item,i)=>{
+                                firstShowView?.length > 0 ? (firstShowView?.map((item,i)=>{
                                     return( <RenderCardCarousel data={item} key={i}/>
                                     )
                                 })) : ("No data")
                             }
+                        </div>
+                        <div className="d-flex justify-content-center gap-3 my-2">
+                            <button onClick={this.prevSlide} className="btn-white m-0">{this.state.arrowPrev}</button>
+                            <button onClick={this.nextSlide} className="btn-white">{this.state.arrowNext}</button>
                         </div>
                         <div className="bg-primary">
                             <div className="w-85 mx-auto py-2">
@@ -176,10 +164,10 @@ class DetailMobil extends Component {
                                 <p className="text-center text-white fs-14 text-400 py-2">{text}</p>
                                 <hr className="my-3"/>
                                 <div className="d-flex justify-content-center gap-3" id="end">
-                                    <Link className="text-decoration-none">
+                                    <Link to="/" className="text-decoration-none">
                                         <button className="btn-block-white">UNDUH BROSUR</button>
                                     </Link>
-                                    <Link className="text-decoration-none">
+                                    <Link  to="/" className="text-decoration-none">
                                         <button className="btn-white">HARGA</button>
                                     </Link>
                                 </div>
@@ -234,7 +222,7 @@ class DetailMobil extends Component {
                                         {
                                             eksterior?.length > 0 ? (eksterior?.map((eks,i)=>{
                                                 return(
-                                                    <div className={eks.id===1 ? "col-12 eks-relative" : "col-6 eks-relative" }>
+                                                    <div data={eks} key={i} className={eks.id===1 ? "col-12 eks-relative" : "col-6 eks-relative" }>
                                                         <img src={eks.image} alt="" style={{display:'block'}}/>
                                                         <div className="eks-overlay"></div>
                                                         <div className={eks.id === 1 ? "eks-title-1" : "eks-title-2"}>
@@ -246,7 +234,7 @@ class DetailMobil extends Component {
                                         }
                                     </div>
                                     <div className="d-flex justify-content-center">
-                                        <Link className="text-decoration-none">
+                                        <Link to="/" className="text-decoration-none">
                                             <button className="btn-block-white">Lihat Semua Eksterior</button>
                                         </Link>
                                     </div>
@@ -257,7 +245,7 @@ class DetailMobil extends Component {
                                         {
                                             interior?.length > 0 ? (interior?.map((eks,i)=>{
                                                 return(
-                                                    <div className={eks.id===1 ? "col-12 eks-relative" : "col-6 eks-relative" }>
+                                                    <div data={eks} key={i} className={eks.id===1 ? "col-12 eks-relative" : "col-6 eks-relative" }>
                                                         <img src={eks.image} alt="" style={{display:'block'}}/>
                                                         <div className="eks-overlay"></div>
                                                         <div className={eks.id === 1 ? "eks-title-1" : "eks-title-2"}>
@@ -269,7 +257,7 @@ class DetailMobil extends Component {
                                         }
                                     </div>
                                     <div className="d-flex justify-content-center">
-                                        <Link className="text-decoration-none">
+                                        <Link to="/" className="text-decoration-none">
                                             <button className="btn-block-white">Lihat Semua Interior</button>
                                         </Link>
                                     </div>
@@ -293,7 +281,7 @@ class DetailMobil extends Component {
                                 {
                                     harga?.length > 0 ? (harga?.map((harga,i)=>{
                                         return(
-                                            <div className="d-flex justify-content-between align-items-center p-3 bg-light rounded box-shadow mb-3">
+                                            <div data={harga} key={i} className="d-flex justify-content-between align-items-center p-3 bg-light rounded box-shadow mb-3">
                                                 <p className="fs-14 text-600">{harga.name}</p>
                                                 <p className="fs-14 text-600">{"Rp "}{FormatHarga(harga.price)}</p>
                                             </div>

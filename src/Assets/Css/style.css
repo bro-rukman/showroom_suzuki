@@ -406,8 +406,6 @@ ul{
     color: var(--primary);
     font-size: 14px;
     font-weight: 600;
-    padding: 8px 16px;
-    margin: 16px 0;
     cursor: pointer;
 }
 .btn-white:hover{
