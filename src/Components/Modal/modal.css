@@ -1,0 +1,18 @@
+.Overlay{
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.Modal{
+    padding: 20px;
+    width: 50%;
+    height: 70%;
+    background-color: #fff;
+    overflow: auto;
+    border: 1px solid gray;
+    border-radius: 10px;
+    box-shadow: 3px 4px 12px solid gray;
+}

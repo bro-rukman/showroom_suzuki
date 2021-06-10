@@ -279,19 +279,826 @@
             "id": 2,
             "title": "All New Ertiga",
             "price": "207000000",
-            "image": "/image/newertiga.png"
+            "image": "/image/newertiga.png",
+            "carousel": [
+                {
+                    "id": 1,
+                    "image": "/image/carouselcars.png",
+                    "sub_image": "/image/extraordinary.png"
+                }
+            ],
+            "menu": [
+                {
+                    "id": 1,
+                    "title": "Overview",
+                    "path": "#Overview"
+                },
+                {
+                    "id": 2,
+                    "title": "Tips & Warna",
+                    "path": "#Tips"
+                },
+                {
+                    "id": 3,
+                    "title": "Eksterior",
+                    "path": "#Eksterior"
+                },
+                {
+                    "id": 4,
+                    "title": "Interior",
+                    "path": "#Interior"
+                },
+                {
+                    "id": 5,
+                    "title": "Spesifikasi",
+                    "path": "#Spesifikasi"
+                },
+                {
+                    "id": 6,
+                    "title": "Daftar Harga",
+                    "path": "#Daftar"
+                }
+            ],
+            "tipe": [
+                {
+                    "id": 1,
+                    "name": "XL7 Alpha",
+                    "detail": [
+                        {
+                            "id": 1,
+                            "image": "/image/xl7red.png",
+                            "title": "RISING ORANGE & BLACK",
+                            "hex_code": "#C04C3C"
+                        }
+                    ]
+                },
+                {
+                    "id": 2,
+                    "name": "XL7 Beta",
+                    "detail": [
+                        {
+                            "id": 1,
+                            "image": "/image/xl7gray.png",
+                            "title": "RISING ORANGE & BLACK",
+                            "hex_code": "#C04C3C"
+                        }
+                    ]
+                },
+                {
+                    "id": 3,
+                    "name": "XL7 Zeta",
+                    "detail": [
+                        {
+                            "id": 1,
+                            "image": "../image/xl7red.png",
+                            "title": "RISING ORANGE & BLACK",
+                            "hex_code": "#C04C3C"
+                        }
+                    ]
+                }
+            ],
+            "eksterior": [
+                {
+                    "id": 1,
+                    "image": "/image/exterior1.png",
+                    "title": "Bold LED Headlamp With DRL (AUTO ON)"
+                },
+                {
+                    "id": 2,
+                    "image": "/image/exterior2.png",
+                    "title": "MUSCULAR CHROME FRONT GRILLE"
+                },
+                {
+                    "id": 3,
+                    "image": "/image/exterior3.png",
+                    "title": "GARNISH FRONT BUMPER LOWER"
+                },
+                {
+                    "id": 4,
+                    "image": "/image/exterior4.png",
+                    "title": "OUTSIDE DOOR MIRROR"
+                },
+                {
+                    "id": 5,
+                    "image": "/image/exterior5.png",
+                    "title": "ROOF RAIL"
+                }
+            ],
+            "interior": [
+                {
+                    "id": 1,
+                    "image": "/image/interior1.png",
+                    "title": "Extra Large Space for Seven"
+                },
+                {
+                    "id": 2,
+                    "image": "/image/interior2.png",
+                    "title": "AC DIGITAL"
+                },
+                {
+                    "id": 3,
+                    "image": "/image/interior3.png",
+                    "title": "ENGINE START STOP BUTTON (ALPHA & BETA)"
+                },
+                {
+                    "id": 4,
+                    "image": "/image/interior4.png",
+                    "title": "STUNNING MID DISPLAY COLOR DOT"
+                },
+                {
+                    "id": 5,
+                    "image": "/image/interior5.png",
+                    "title": "1ST & 2ND ROW CENTER ARM REST"
+                }
+            ],
+            "spesifikasi": [
+                {
+                    "id": 1,
+                    "title": "DIMENSI",
+                    "detail": [
+                        {
+                            "id": 1,
+                            "text": "Panjang Keseluruhan",
+                            "size": "4450",
+                            "satuan": "mm"
+                        },
+                        {
+                            "id": 2,
+                            "text": "Lebar Keseluruhan",
+                            "size": "1775",
+                            "satuan": "mm"
+                        },
+                        {
+                            "id": 3,
+                            "text": "Tinggi Keseluruhan",
+                            "size": "1710",
+                            "satuan": "mm"
+                        },
+                        {
+                            "id": 4,
+                            "text": "Jarak Poros Roda",
+                            "size": "2740",
+                            "satuan": "mm"
+                        },
+                        {
+                            "id": 5,
+                            "text": "Jarak Pijak Depan",
+                            "size": "1515",
+                            "satuan": "mm"
+                        },
+                        {
+                            "id": 6,
+                            "text": "Jarak Pijak Belakang",
+                            "size": "1530",
+                            "satuan": "mm"
+                        },
+                        {
+                            "id": 7,
+                            "text": "Jarak Terendah",
+                            "size": "5.1",
+                            "satuan": "  "
+                        },
+                        {
+                            "id": 8,
+                            "text": "Radius Putar Minimum",
+                            "size": "200",
+                            "satuan": "mm"
+                        }
+                    ]
+                },
+                {
+                    "id": 2,
+                    "title": "MESIN",
+                    "detail": [
+                        {
+                            "id": 1,
+                            "text": "Mesin"
+                        }
+                    ]
+                },
+                {
+                    "id": 3,
+                    "title": "TRANSMISI",
+                    "detail": [
+                        {
+                            "id": 1,
+                            "text": "Transmisi"
+                        }
+                    ]
+                },
+                {
+                    "id": 4,
+                    "title": "BERAT",
+                    "detail": [
+                        {
+                            "id": 1,
+                            "text": "Berat"
+                        }
+                    ]
+                },
+                {
+                    "id": 5,
+                    "title": "RANGKA",
+                    "detail": [
+                        {
+                            "id": 1,
+                            "text": "Rangka"
+                        }
+                    ]
+                },
+                {
+                    "id": 6,
+                    "title": "KAPASITAS",
+                    "detail": [
+                        {
+                            "id": 1,
+                            "text": "Kapasitas"
+                        }
+                    ]
+                }
+            ],
+            "harga": [
+                {
+                    "id": 1,
+                    "name": "XL7 ZETA M/T",
+                    "price": "232000000"
+                },
+                {
+                    "id": 1,
+                    "name": "XL7 ZETA A/T",
+                    "price": "242500000"
+                },
+                {
+                    "id": 1,
+                    "name": "XL7 BETA M/T",
+                    "price": "248500000"
+                },
+                {
+                    "id": 1,
+                    "name": "XL7 BETA A/T",
+                    "price": "259000000"
+                },
+                {
+                    "id": 1,
+                    "name": "XL7 ALPHA M/T",
+                    "price": "258500000"
+                },
+                {
+                    "id": 1,
+                    "name": "XL7 ALPHA A/T",
+                    "price": "269000000"
+                }
+            ]
         },
         {
             "id": 3,
             "title": "All New Ertiga Suzuki Sport",
             "price": "252000000",
-            "image": "/image/ertigasport.png"
+            "image": "/image/ertigasport.png",
+            "carousel": [
+                {
+                    "id": 1,
+                    "image": "/image/carouselcars.png",
+                    "sub_image": "/image/extraordinary.png"
+                }
+            ],
+            "menu": [
+                {
+                    "id": 1,
+                    "title": "Overview",
+                    "path": "#Overview"
+                },
+                {
+                    "id": 2,
+                    "title": "Tips & Warna",
+                    "path": "#Tips"
+                },
+                {
+                    "id": 3,
+                    "title": "Eksterior",
+                    "path": "#Eksterior"
+                },
+                {
+                    "id": 4,
+                    "title": "Interior",
+                    "path": "#Interior"
+                },
+                {
+                    "id": 5,
+                    "title": "Spesifikasi",
+                    "path": "#Spesifikasi"
+                },
+                {
+                    "id": 6,
+                    "title": "Daftar Harga",
+                    "path": "#Daftar"
+                }
+            ],
+            "tipe": [
+                {
+                    "id": 1,
+                    "name": "XL7 Alpha",
+                    "detail": [
+                        {
+                            "id": 1,
+                            "image": "/image/xl7red.png",
+                            "title": "RISING ORANGE & BLACK",
+                            "hex_code": "#C04C3C"
+                        }
+                    ]
+                },
+                {
+                    "id": 2,
+                    "name": "XL7 Beta",
+                    "detail": [
+                        {
+                            "id": 1,
+                            "image": "/image/xl7gray.png",
+                            "title": "RISING ORANGE & BLACK",
+                            "hex_code": "#C04C3C"
+                        }
+                    ]
+                },
+                {
+                    "id": 3,
+                    "name": "XL7 Zeta",
+                    "detail": [
+                        {
+                            "id": 1,
+                            "image": "../image/xl7red.png",
+                            "title": "RISING ORANGE & BLACK",
+                            "hex_code": "#C04C3C"
+                        }
+                    ]
+                }
+            ],
+            "eksterior": [
+                {
+                    "id": 1,
+                    "image": "/image/exterior1.png",
+                    "title": "Bold LED Headlamp With DRL (AUTO ON)"
+                },
+                {
+                    "id": 2,
+                    "image": "/image/exterior2.png",
+                    "title": "MUSCULAR CHROME FRONT GRILLE"
+                },
+                {
+                    "id": 3,
+                    "image": "/image/exterior3.png",
+                    "title": "GARNISH FRONT BUMPER LOWER"
+                },
+                {
+                    "id": 4,
+                    "image": "/image/exterior4.png",
+                    "title": "OUTSIDE DOOR MIRROR"
+                },
+                {
+                    "id": 5,
+                    "image": "/image/exterior5.png",
+                    "title": "ROOF RAIL"
+                }
+            ],
+            "interior": [
+                {
+                    "id": 1,
+                    "image": "/image/interior1.png",
+                    "title": "Extra Large Space for Seven"
+                },
+                {
+                    "id": 2,
+                    "image": "/image/interior2.png",
+                    "title": "AC DIGITAL"
+                },
+                {
+                    "id": 3,
+                    "image": "/image/interior3.png",
+                    "title": "ENGINE START STOP BUTTON (ALPHA & BETA)"
+                },
+                {
+                    "id": 4,
+                    "image": "/image/interior4.png",
+                    "title": "STUNNING MID DISPLAY COLOR DOT"
+                },
+                {
+                    "id": 5,
+                    "image": "/image/interior5.png",
+                    "title": "1ST & 2ND ROW CENTER ARM REST"
+                }
+            ],
+            "spesifikasi": [
+                {
+                    "id": 1,
+                    "title": "DIMENSI",
+                    "detail": [
+                        {
+                            "id": 1,
+                            "text": "Panjang Keseluruhan",
+                            "size": "4450",
+                            "satuan": "mm"
+                        },
+                        {
+                            "id": 2,
+                            "text": "Lebar Keseluruhan",
+                            "size": "1775",
+                            "satuan": "mm"
+                        },
+                        {
+                            "id": 3,
+                            "text": "Tinggi Keseluruhan",
+                            "size": "1710",
+                            "satuan": "mm"
+                        },
+                        {
+                            "id": 4,
+                            "text": "Jarak Poros Roda",
+                            "size": "2740",
+                            "satuan": "mm"
+                        },
+                        {
+                            "id": 5,
+                            "text": "Jarak Pijak Depan",
+                            "size": "1515",
+                            "satuan": "mm"
+                        },
+                        {
+                            "id": 6,
+                            "text": "Jarak Pijak Belakang",
+                            "size": "1530",
+                            "satuan": "mm"
+                        },
+                        {
+                            "id": 7,
+                            "text": "Jarak Terendah",
+                            "size": "5.1",
+                            "satuan": "  "
+                        },
+                        {
+                            "id": 8,
+                            "text": "Radius Putar Minimum",
+                            "size": "200",
+                            "satuan": "mm"
+                        }
+                    ]
+                },
+                {
+                    "id": 2,
+                    "title": "MESIN",
+                    "detail": [
+                        {
+                            "id": 1,
+                            "text": "Mesin"
+                        }
+                    ]
+                },
+                {
+                    "id": 3,
+                    "title": "TRANSMISI",
+                    "detail": [
+                        {
+                            "id": 1,
+                            "text": "Transmisi"
+                        }
+                    ]
+                },
+                {
+                    "id": 4,
+                    "title": "BERAT",
+                    "detail": [
+                        {
+                            "id": 1,
+                            "text": "Berat"
+                        }
+                    ]
+                },
+                {
+                    "id": 5,
+                    "title": "RANGKA",
+                    "detail": [
+                        {
+                            "id": 1,
+                            "text": "Rangka"
+                        }
+                    ]
+                },
+                {
+                    "id": 6,
+                    "title": "KAPASITAS",
+                    "detail": [
+                        {
+                            "id": 1,
+                            "text": "Kapasitas"
+                        }
+                    ]
+                }
+            ],
+            "harga": [
+                {
+                    "id": 1,
+                    "name": "XL7 ZETA M/T",
+                    "price": "232000000"
+                },
+                {
+                    "id": 1,
+                    "name": "XL7 ZETA A/T",
+                    "price": "242500000"
+                },
+                {
+                    "id": 1,
+                    "name": "XL7 BETA M/T",
+                    "price": "248500000"
+                },
+                {
+                    "id": 1,
+                    "name": "XL7 BETA A/T",
+                    "price": "259000000"
+                },
+                {
+                    "id": 1,
+                    "name": "XL7 ALPHA M/T",
+                    "price": "258500000"
+                },
+                {
+                    "id": 1,
+                    "name": "XL7 ALPHA A/T",
+                    "price": "269000000"
+                }
+            ]
         },
         {
             "id": 4,
             "title": "New Ignis",
             "price": "171000000",
-            "image": "/image/ignis.png"
+            "image": "/image/ignis.png",
+            "carousel": [
+                {
+                    "id": 1,
+                    "image": "/image/carouselcars.png",
+                    "sub_image": "/image/extraordinary.png"
+                }
+            ],
+            "menu": [
+                {
+                    "id": 1,
+                    "title": "Overview",
+                    "path": "#Overview"
+                },
+                {
+                    "id": 2,
+                    "title": "Tips & Warna",
+                    "path": "#Tips"
+                },
+                {
+                    "id": 3,
+                    "title": "Eksterior",
+                    "path": "#Eksterior"
+                },
+                {
+                    "id": 4,
+                    "title": "Interior",
+                    "path": "#Interior"
+                },
+                {
+                    "id": 5,
+                    "title": "Spesifikasi",
+                    "path": "#Spesifikasi"
+                },
+                {
+                    "id": 6,
+                    "title": "Daftar Harga",
+                    "path": "#Daftar"
+                }
+            ],
+            "tipe": [
+                {
+                    "id": 1,
+                    "name": "XL7 Alpha",
+                    "detail": [
+                        {
+                            "id": 1,
+                            "image": "/image/xl7red.png",
+                            "title": "RISING ORANGE & BLACK",
+                            "hex_code": "#C04C3C"
+                        }
+                    ]
+                },
+                {
+                    "id": 2,
+                    "name": "XL7 Beta",
+                    "detail": [
+                        {
+                            "id": 1,
+                            "image": "/image/xl7gray.png",
+                            "title": "RISING ORANGE & BLACK",
+                            "hex_code": "#C04C3C"
+                        }
+                    ]
+                },
+                {
+                    "id": 3,
+                    "name": "XL7 Zeta",
+                    "detail": [
+                        {
+                            "id": 1,
+                            "image": "../image/xl7red.png",
+                            "title": "RISING ORANGE & BLACK",
+                            "hex_code": "#C04C3C"
+                        }
+                    ]
+                }
+            ],
+            "eksterior": [
+                {
+                    "id": 1,
+                    "image": "/image/exterior1.png",
+                    "title": "Bold LED Headlamp With DRL (AUTO ON)"
+                },
+                {
+                    "id": 2,
+                    "image": "/image/exterior2.png",
+                    "title": "MUSCULAR CHROME FRONT GRILLE"
+                },
+                {
+                    "id": 3,
+                    "image": "/image/exterior3.png",
+                    "title": "GARNISH FRONT BUMPER LOWER"
+                },
+                {
+                    "id": 4,
+                    "image": "/image/exterior4.png",
+                    "title": "OUTSIDE DOOR MIRROR"
+                },
+                {
+                    "id": 5,
+                    "image": "/image/exterior5.png",
+                    "title": "ROOF RAIL"
+                }
+            ],
+            "interior": [
+                {
+                    "id": 1,
+                    "image": "/image/interior1.png",
+                    "title": "Extra Large Space for Seven"
+                },
+                {
+                    "id": 2,
+                    "image": "/image/interior2.png",
+                    "title": "AC DIGITAL"
+                },
+                {
+                    "id": 3,
+                    "image": "/image/interior3.png",
+                    "title": "ENGINE START STOP BUTTON (ALPHA & BETA)"
+                },
+                {
+                    "id": 4,
+                    "image": "/image/interior4.png",
+                    "title": "STUNNING MID DISPLAY COLOR DOT"
+                },
+                {
+                    "id": 5,
+                    "image": "/image/interior5.png",
+                    "title": "1ST & 2ND ROW CENTER ARM REST"
+                }
+            ],
+            "spesifikasi": [
+                {
+                    "id": 1,
+                    "title": "DIMENSI",
+                    "detail": [
+                        {
+                            "id": 1,
+                            "text": "Panjang Keseluruhan",
+                            "size": "4450",
+                            "satuan": "mm"
+                        },
+                        {
+                            "id": 2,
+                            "text": "Lebar Keseluruhan",
+                            "size": "1775",
+                            "satuan": "mm"
+                        },
+                        {
+                            "id": 3,
+                            "text": "Tinggi Keseluruhan",
+                            "size": "1710",
+                            "satuan": "mm"
+                        },
+                        {
+                            "id": 4,
+                            "text": "Jarak Poros Roda",
+                            "size": "2740",
+                            "satuan": "mm"
+                        },
+                        {
+                            "id": 5,
+                            "text": "Jarak Pijak Depan",
+                            "size": "1515",
+                            "satuan": "mm"
+                        },
+                        {
+                            "id": 6,
+                            "text": "Jarak Pijak Belakang",
+                            "size": "1530",
+                            "satuan": "mm"
+                        },
+                        {
+                            "id": 7,
+                            "text": "Jarak Terendah",
+                            "size": "5.1",
+                            "satuan": "  "
+                        },
+                        {
+                            "id": 8,
+                            "text": "Radius Putar Minimum",
+                            "size": "200",
+                            "satuan": "mm"
+                        }
+                    ]
+                },
+                {
+                    "id": 2,
+                    "title": "MESIN",
+                    "detail": [
+                        {
+                            "id": 1,
+                            "text": "Mesin"
+                        }
+                    ]
+                },
+                {
+                    "id": 3,
+                    "title": "TRANSMISI",
+                    "detail": [
+                        {
+                            "id": 1,
+                            "text": "Transmisi"
+                        }
+                    ]
+                },
+                {
+                    "id": 4,
+                    "title": "BERAT",
+                    "detail": [
+                        {
+                            "id": 1,
+                            "text": "Berat"
+                        }
+                    ]
+                },
+                {
+                    "id": 5,
+                    "title": "RANGKA",
+                    "detail": [
+                        {
+                            "id": 1,
+                            "text": "Rangka"
+                        }
+                    ]
+                },
+                {
+                    "id": 6,
+                    "title": "KAPASITAS",
+                    "detail": [
+                        {
+                            "id": 1,
+                            "text": "Kapasitas"
+                        }
+                    ]
+                }
+            ],
+            "harga": [
+                {
+                    "id": 1,
+                    "name": "XL7 ZETA M/T",
+                    "price": "232000000"
+                },
+                {
+                    "id": 1,
+                    "name": "XL7 ZETA A/T",
+                    "price": "242500000"
+                },
+                {
+                    "id": 1,
+                    "name": "XL7 BETA M/T",
+                    "price": "248500000"
+                },
+                {
+                    "id": 1,
+                    "name": "XL7 BETA A/T",
+                    "price": "259000000"
+                },
+                {
+                    "id": 1,
+                    "name": "XL7 ALPHA M/T",
+                    "price": "258500000"
+                },
+                {
+                    "id": 1,
+                    "name": "XL7 ALPHA A/T",
+                    "price": "269000000"
+                }
+            ]
         }
     ],
     "dataCabang": [

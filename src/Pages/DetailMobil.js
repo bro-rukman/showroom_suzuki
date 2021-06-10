@@ -9,6 +9,8 @@ import RenderCardAccordion from '../Parts/RenderCards/RenderCardAccordion';
 import {Gear,Whatsapp,Simulasi} from '../Components/Asset/index'
 import {FormatHarga} from '../Configs/FormatHarga/FormatHarga'
 import Footers from '../Parts/Footers/Footers';
+// import Modal from 'react-modal'
+import Modal from '../Components/Modal/Modal'
 
 class DetailMobil extends Component {
     constructor(props){
@@ -24,7 +26,8 @@ class DetailMobil extends Component {
             next : 'next',
             prev : 'prev',
             index : 0,
-            dataSlide : []
+            dataSlide : [],
+            showModal : false
         }
         this.myRef = React.createRef()
          this.handleSlider =  this.handleSlider.bind(this)
@@ -42,6 +45,31 @@ class DetailMobil extends Component {
         })
         this.fetchDataCabang()
     }
+    handleShowModal=()=>{
+        this.setState({
+            showModal : true
+        })
+    }
+    closeModal=()=>{
+        this.setState({
+            showModal : !this.state.showModal
+        })
+    }
+    handleModal=()=>{
+        this.setState({
+            showModal : true
+        })
+    }
+    handleClose=()=>{
+        this.setState({
+            showModal : false
+        })
+    }
+    handleOpen=()=>{
+        this.setState({
+            showModal : true
+        })
+    }
     fetchDataCabang=()=>{
         axios.get(`${RootDevelopment}/dataCabang`).then((res)=>{
             this.setState({
@@ -52,30 +80,6 @@ class DetailMobil extends Component {
         })
     }
     toggleTab=(id,path)=>{
-        console.log(path);
-        // const pathName = path
-        // const splitPath = pathName.split("#")
-        // const slicePath = splitPath.slice(0,2)
-        // console.log(slicePath);
-        // const getSlice = slicePath[1]
-        // console.log(getSlice);
-        const elementId = document.getElementById(["Overview","Tips","Eksterior","Interior","Spesifikasi","Daftar"])
-        const overview = document.getElementById("Overview")
-        // overview.scrollIntoView({behavior:'smooth'})
-        const tips = document.getElementById("Tips")
-        // tips.scrollIntoView({behavior:'smooth'})
-        // const eksterior = document.getElementById("Eksterior")
-        // eksterior.scrollIntoView({behavior:'smooth'})
-        // const interior = document.getElementById("Interior")
-        // interior.scrollIntoView({behavior:'smooth'})
-        // const spesifikasi = document.getElementById("Spesifikasi")
-        // spesifikasi.scrollIntoView({behavior:'smooth'})
-        // const daftar = document.getElementById("Daftar")
-        // daftar.scrollIntoView({behavior:'smooth'})
-        // if (getSlice === overview) {
-        //     window.scrollTo(0,300)
-        // }else if(getSlice === tips)
-        //     tips.scrollIntoView()
         this.setState({
             active : id
         })
@@ -113,13 +117,6 @@ class DetailMobil extends Component {
         })
     }
     render() {
-        let tips = document.getElementById("Tips")
-
-        // window.addEventListener('scroll',()=>{
-        //     this.handleSlider()
-        //     const scroll = window.scrollY;
-        //     const scrollable = document.documentElement.scrollHeight - window.innerHeight
-        // })
         const dataMobil = this.state.dataMobil
         console.log(dataMobil);
         const tipeMobil = dataMobil.tipe
@@ -145,6 +142,7 @@ class DetailMobil extends Component {
         let text = "Suzuki XL7 hadir dengan tampilan maskulin, tangguh dan berkarakter. Desain modern SUV 7-Seater memberikan kebanggaan dan kepercayaan bagi penggunanya. Dilengkapi dengan fitur canggih semakin membuat XL7 menjadi SUV yang luar biasa di kelasnya"
         return (
             <>
+            
                 <Headers data={dataCabang}/>
                 <div className="w-375 mx-auto box-shadow">
                     <div className="container">
@@ -314,7 +312,7 @@ class DetailMobil extends Component {
                                 <div className="bar-absolute">
                                     <div className="container">
                                     <div className="bg-white d-flex justify-content-between align-items-center rounded-lg p-2">
-                                        <button className="btn-primary py-2 px-3 fs-14 text-600">Booking Mobil</button>
+                                        <button className="btn-primary p-12 fs-14 text-600 pointer" onClick={this.handleShowModal}>Booking Mobil</button>
                                         <div className="card-service">
                                             <img src={Whatsapp} alt="" className="mx-auto " style={{display:'block'}}/>
                                             <p className="fs-10 text-dark text-600 mt-2" style={{textAnchor:'none'}}>Whatsapp</p>
@@ -327,6 +325,7 @@ class DetailMobil extends Component {
                                 </div>
                             </div>
                         </div>
+                        <Modal data={dataMobil} showModal={this.state.showModal} onClose={this.closeModal} className="Modal"/>
                 </div>
             </>
         );

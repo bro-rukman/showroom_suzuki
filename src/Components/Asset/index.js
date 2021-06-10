@@ -7,10 +7,12 @@ import ServiceImage from '../../Assets/Images/ImageService.png'
 import SukuCadang from '../../Assets/Images/ImageSuku.png'
 import Gear from '../../Assets/Images/geartoaccomplish.png'
 
+
 // icon
 import Down from '../../Assets/Images/Icon/arrow-down.svg'
 import Up from '../../Assets/Images/Icon/arrow-up.svg'
+import Cancel from '../../Assets/Images/Icon/cancel-black.svg'
 
 
-export {Whatsapp,WhatsappSVG,DaftarHarga,Service,Simulasi,ServiceImage,SukuCadang,Gear,Down,Up};
+export {Whatsapp,WhatsappSVG,DaftarHarga,Service,Simulasi,ServiceImage,SukuCadang,Gear,Down,Up,Cancel};
 
