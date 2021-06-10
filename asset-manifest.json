@@ -1,0 +1,37 @@
+{
+  "files": {
+    "main.css": "/test-antigravity/static/css/main.2ed1b11a.chunk.css",
+    "main.js": "/test-antigravity/static/js/main.fc99d9af.chunk.js",
+    "main.js.map": "/test-antigravity/static/js/main.fc99d9af.chunk.js.map",
+    "runtime-main.js": "/test-antigravity/static/js/runtime-main.805ebd4f.js",
+    "runtime-main.js.map": "/test-antigravity/static/js/runtime-main.805ebd4f.js.map",
+    "static/js/2.c07c30a9.chunk.js": "/test-antigravity/static/js/2.c07c30a9.chunk.js",
+    "static/js/2.c07c30a9.chunk.js.map": "/test-antigravity/static/js/2.c07c30a9.chunk.js.map",
+    "static/js/3.7ed077fc.chunk.js": "/test-antigravity/static/js/3.7ed077fc.chunk.js",
+    "static/js/3.7ed077fc.chunk.js.map": "/test-antigravity/static/js/3.7ed077fc.chunk.js.map",
+    "index.html": "/test-antigravity/index.html",
+    "static/css/main.2ed1b11a.chunk.css.map": "/test-antigravity/static/css/main.2ed1b11a.chunk.css.map",
+    "static/js/2.c07c30a9.chunk.js.LICENSE.txt": "/test-antigravity/static/js/2.c07c30a9.chunk.js.LICENSE.txt",
+    "static/media/Call.15049054.svg": "/test-antigravity/static/media/Call.15049054.svg",
+    "static/media/Callwhite.09016ef7.svg": "/test-antigravity/static/media/Callwhite.09016ef7.svg",
+    "static/media/ImageService.f9226ecb.png": "/test-antigravity/static/media/ImageService.f9226ecb.png",
+    "static/media/ImageSuku.9f16869b.png": "/test-antigravity/static/media/ImageSuku.9f16869b.png",
+    "static/media/Pin.0cd2d734.svg": "/test-antigravity/static/media/Pin.0cd2d734.svg",
+    "static/media/PinPrimary.368cbb77.svg": "/test-antigravity/static/media/PinPrimary.368cbb77.svg",
+    "static/media/arrow-down.14604bda.svg": "/test-antigravity/static/media/arrow-down.14604bda.svg",
+    "static/media/arrow-up.60fe960d.svg": "/test-antigravity/static/media/arrow-up.60fe960d.svg",
+    "static/media/cancel-black.a00986ad.svg": "/test-antigravity/static/media/cancel-black.a00986ad.svg",
+    "static/media/cancel-filled.23fd6c8c.svg": "/test-antigravity/static/media/cancel-filled.23fd6c8c.svg",
+    "static/media/geartoaccomplish.617269e7.png": "/test-antigravity/static/media/geartoaccomplish.617269e7.png",
+    "static/media/image 13.e021a0ba.png": "/test-antigravity/static/media/image 13.e021a0ba.png",
+    "static/media/logo.6ce24c58.svg": "/test-antigravity/static/media/logo.6ce24c58.svg",
+    "static/media/menu.5dea7893.svg": "/test-antigravity/static/media/menu.5dea7893.svg",
+    "static/media/whatsapp.bfbe4d30.svg": "/test-antigravity/static/media/whatsapp.bfbe4d30.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.805ebd4f.js",
+    "static/js/2.c07c30a9.chunk.js",
+    "static/css/main.2ed1b11a.chunk.css",
+    "static/js/main.fc99d9af.chunk.js"
+  ]
+}
