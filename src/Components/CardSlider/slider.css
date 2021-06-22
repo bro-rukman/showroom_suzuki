@@ -1,0 +1,32 @@
+.slider-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(0,50%);
+    width: 100%;
+    min-height: 200px;
+    overflow: auto;
+    padding-bottom: 20px;
+}
+.slider-container::-webkit-scrollbar{
+    display: none;
+}
+.slider-inner{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    transition: 0s ease-in;
+}
+.slide-img{
+    text-align: center;
+    padding: 2rem;
+    background-color: #000;
+}
+.overflow-auto{
+    overflow: auto;
+}

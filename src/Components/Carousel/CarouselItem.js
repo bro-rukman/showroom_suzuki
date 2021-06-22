@@ -55,7 +55,7 @@ class CarouselItem extends Component {
         }
         return (
             <>
-            <div className="relative w-375 mx-auto" >
+            <div className="relative mx-auto container" >
                 <div className="d-flex justify-content-center gap-2 " style={{overflow:'hidden'}}>
                     {
                         firstShowView.map((img,index)=>{

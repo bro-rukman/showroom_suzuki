@@ -6,6 +6,8 @@ import DetailOutlet from './Pages/DetailOutlet';
 import DetailMobil from './Pages/DetailMobil';
 import CarouselItem from './Components/Carousel/CarouselItem';
 import ModalBooking from './Parts/ModalBooking/ModalBooking';
+import CardSlider from './Components/CardSlider/CardSlider';
+import Sidebar from './Components/Sidebar/Sidebar';
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
         <Route path="/DetailMobil/:id" component={DetailMobil}/>
         <Route path="/carousel" component={CarouselItem}/>
         <Route path="/modal" component={ModalBooking}/>
+        <Route path="/slider" component={CardSlider}/>
+        <Route path="/sidebar" component={Sidebar}/>
       </Router>
     </>
   );
